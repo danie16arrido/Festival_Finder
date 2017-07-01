@@ -42,6 +42,13 @@ app.post("/festivals", function(req,res) {
   })
 })
 
+app.get("/festivals/:id", function(req,res) {
+
+  query.all(function(festivals) {
+  res.json(festivals[req.params.id]);
+  })
+})
+
 app.listen(3000, function () {
   console.log( " listening on 3000" );
 })
