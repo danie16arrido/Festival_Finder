@@ -1,4 +1,4 @@
-var Festival = function() {
+var Festival = function(options) {
   this.title = options.title;
   this.description = options.description;
   this.type = options.type;

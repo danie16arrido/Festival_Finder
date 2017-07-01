@@ -21,7 +21,7 @@ FestivalQuery.prototype = {
   MongoClient.connect(this.url,function(err,db) {
     if (db) {
       var collection = db.collection('festivals');
-      collection.insert(filmToAdd);
+      collection.insert(festivalToAdd);
       collection.find().toArray(function(err,docs) {
         if (docs) {
           console.log(docs);

@@ -1,3 +1,5 @@
+var Festival = require('./client/src/models/festival.js')
+
 var FestivalQuery = require('./db/festival_query.js');
 var query = new FestivalQuery();
 
@@ -26,8 +28,15 @@ app.post("/festivals", function(req,res) {
 
   var newFestival = new Festival(
   {
-    
+    title: req.body.title,
+    description: req.body.description,
+    type: req.body.type,
+    start: req.body.start,
+    end: req.body.end,
+    country: req.body.country,
+    latlng: req.body.latlng
   })
+
   query.add(newFestival, function(festivals) {
     res.json(festivals);
   })
