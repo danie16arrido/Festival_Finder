@@ -49,6 +49,32 @@ app.get("/festivals/:id", function(req,res) {
   })
 })
 
+app.put("/festivals/:id", function(req,res) {
+  var newFestival = new Festival(
+  {
+   
+    title: req.body.title,
+    description: req.body.description,
+    type: req.body.type,
+    start: req.body.start,
+    end: req.body.end,
+    country: req.body.country,
+    latlng: req.body.latlng
+  })
+
+  var festivalToUpdate = query.all(function(festivals) {
+  festivals[req.params.id];
+  })
+
+  festivalToUpdate = newFestival;
+
+  query.all(function(festivals) {
+  res.json(festivals);
+  })
+
+
+})
+
 app.listen(3000, function () {
   console.log( " listening on 3000" );
 })

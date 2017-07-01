@@ -31,8 +31,6 @@ FestivalQuery.prototype = {
     })
   },
 
-  
-
 }
 
 module.exports = FestivalQuery;
