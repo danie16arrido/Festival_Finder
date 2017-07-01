@@ -6,10 +6,11 @@ var query = new FestivalsQuery();
 
 //country index
 festivalsRouter.get('/', function(req, res) {
-  // query.all( function ( festivals ) {
-  //   res.json( festivals );
-  // })
-    res.json("hola")
+  query.all( function ( festivals ) {
+    res.json( festivals );
+  })
 });
+
+
 
 module.exports = festivalsRouter;
