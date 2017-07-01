@@ -20,7 +20,14 @@ app.get('/', function( req, res) {
 
 app.get("/festivals", function(req,res){
   query.all(function(festivals) {
-  res.json(festivals);
+    res.json(festivals);
+  })
+})
+
+app.get("/festivals/:id", function(req,res) {
+
+  query.all(function(festivals) {
+    res.json(festivals[req.params.id]);
   })
 })
 
@@ -42,17 +49,11 @@ app.post("/festivals", function(req,res) {
   })
 })
 
-app.get("/festivals/:id", function(req,res) {
-
-  query.all(function(festivals) {
-  res.json(festivals[req.params.id]);
-  })
-})
-
 app.put("/festivals/:id", function(req,res) {
-  var newFestival = new Festival(
-  {
-   
+
+  var festivalToUpdate = req.params.id;
+
+  var newFestival = new Festival({
     title: req.body.title,
     description: req.body.description,
     type: req.body.type,
@@ -61,18 +62,13 @@ app.put("/festivals/:id", function(req,res) {
     country: req.body.country,
     position: req.body.position
   })
-
-  var festivalToUpdate = query.all(function(festivals) {
-  festivals[req.params.id];
-  })
-
-  festivalToUpdate = newFestival;
-
-  query.all(function(festivals) {
-  res.json(festivals);
+  
+  query.update(festivalToUpdate, newFestival, function(festivals) {
+    res.json(festivals);
   })
 
 })
+
 
 app.listen(3000, function () {
   console.log( " listening on 3000" );
