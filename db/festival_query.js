@@ -5,6 +5,7 @@ var FestivalQuery = function() {
 }
 
 FestivalQuery.prototype = {
+
   all: function(onQueryFinished) {
     MongoClient.connect(this.url,function(err,db) {
       if(err) return;
@@ -14,7 +15,23 @@ FestivalQuery.prototype = {
         onQueryFinished(docs);
       });
     });
-  }
+  },
+
+  add: function(festivalToAdd,onQueryFinished){
+  MongoClient.connect(this.url,function(err,db) {
+    if (db) {
+      var collection = db.collection('festivals');
+      collection.insert(filmToAdd);
+      collection.find().toArray(function(err,docs) {
+        if (docs) {
+          console.log(docs);
+          onQueryFinished(docs);
+        }
+      })
+    }
+  })
+}
+
 }
 
 module.exports = FestivalQuery;

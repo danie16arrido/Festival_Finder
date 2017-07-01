@@ -16,10 +16,20 @@ app.get('/', function( req, res) {
   res.sendFile(__dirname + "/client/build/index.html")
 })
 
-
-app.get("/topFestivals", function(req,res){
+app.get("/festivals", function(req,res){
   query.all(function(festivals) {
   res.json(festivals);
+  })
+})
+
+app.post("/festivals", function(req,res) {
+
+  var newFestival = new Festival(
+  {
+    
+  })
+  query.add(newFestival, function(festivals) {
+    res.json(festivals);
   })
 })
 
