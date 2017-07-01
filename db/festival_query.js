@@ -1,7 +1,7 @@
 var MongoClient = require('mongodb').MongoClient;
 
 var FestivalQuery = function() {
-  this.url = "mongodb://localhost:27017/top_festivals_site";
+  this.url = "mongodb://localhost:27017/festival_finder";
 }
 
 FestivalQuery.prototype = {
