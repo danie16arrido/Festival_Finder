@@ -1,3 +1,8 @@
+var Festival = require('./client/src/models/festival.js')
+
+var FestivalQuery = require('./db/festival_query.js');
+var query = new FestivalQuery();
+
 var express = require('express');
 var app = express();
 
@@ -13,12 +18,58 @@ app.get('/', function( req, res) {
   res.sendFile(__dirname + "/client/build/index.html")
 })
 
-app.get("/topFestivals", function(req, res) {
-  MongoClient.connect("mongodb://localhost:27017/top_festivals_site", function(err,db) {
-    db.collection("festivals").find().toArray(function(err,docs) {
-      res.json(docs);
-      db.close();
-    })
+app.get("/festivals", function(req,res){
+  query.all(function(festivals) {
+  res.json(festivals);
+  })
+})
+
+app.post("/festivals", function(req,res) {
+
+  var newFestival = new Festival(
+  {
+    title: req.body.title,
+    description: req.body.description,
+    type: req.body.type,
+    start: req.body.start,
+    end: req.body.end,
+    country: req.body.country,
+    latlng: req.body.latlng
+  })
+
+  query.add(newFestival, function(festivals) {
+    res.json(festivals);
+  })
+})
+
+app.get("/festivals/:id", function(req,res) {
+
+  query.all(function(festivals) {
+  res.json(festivals[req.params.id]);
+  })
+})
+
+app.put("/festivals/:id", function(req,res) {
+  var newFestival = new Festival(
+  {
+   
+    title: req.body.title,
+    description: req.body.description,
+    type: req.body.type,
+    start: req.body.start,
+    end: req.body.end,
+    country: req.body.country,
+    latlng: req.body.latlng
+  })
+
+  var festivalToUpdate = query.all(function(festivals) {
+  festivals[req.params.id];
+  })
+
+  festivalToUpdate = newFestival;
+
+  query.all(function(festivals) {
+  res.json(festivals);
   })
 
 })
