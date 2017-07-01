@@ -34,7 +34,7 @@ app.post("/festivals", function(req,res) {
     start: req.body.start,
     end: req.body.end,
     country: req.body.country,
-    latlng: req.body.latlng
+    position: req.body.position
   })
 
   query.add(newFestival, function(festivals) {
@@ -59,7 +59,7 @@ app.put("/festivals/:id", function(req,res) {
     start: req.body.start,
     end: req.body.end,
     country: req.body.country,
-    latlng: req.body.latlng
+    position: req.body.position
   })
 
   var festivalToUpdate = query.all(function(festivals) {
