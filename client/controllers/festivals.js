@@ -16,9 +16,6 @@ festivalsRouter.get('/', function( req, res ) {
 
 //festival SHOW
 festivalsRouter.get("/:id", function(req,res) {
-  // query.all( function( festivals ) {
-  // res.json( festivals.findOne({"uniq": req.params.uniq}) );
-  // })
   query.findByID(req.params.id, function( festival) {
     res.json( festival );
   })
@@ -36,19 +33,25 @@ festivalsRouter.post("/", function(req,res) {
     end: req.body.end,
     country: req.body.country,
     position: req.body.position
-  })
+  });
 
-  query.add(newFestival, function(festivals) {
-    res.json(festivals);
+  query.add(newFestival, function( festival) {
+    res.json( festival );
   })
 });
 
-//festival UPDATE
-// festivalsRouter.put("/:id", function(req,res) {
-//   query.update(req.body, function( docs ) {
-//     res.json ( docs )
-//   })
-// });
+// festival UPDATE
+festivalsRouter.put("/:id", function(req,res) {
+  query.update(req.params.id, req.body, function( docs ) {
+    res.json( docs )
+  })
+});
+
+festivalsRouter.delete("/:id", function ( req, res) {
+  query.delete( req.params.id, function ( docs) {
+    res.json( docs );
+  })
+})
 
 
 module.exports = festivalsRouter;

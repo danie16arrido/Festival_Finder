@@ -47,16 +47,34 @@ FestivalQuery.prototype = {
   },
 
 
-  // update: function ( payload, onQueryFinished) {
-  //
-  //   MongoClient.connect(this.url, function (err, db) {
-  //      if (db) {
-  //        var collection = db.collection( this.collection )
-  //        collection.updateOne( { uniq: payload.uniq }, { $set: payload },{ upsert:true });
-  //      }
-  //      db.close()
-  //    }.bind( this ))
-  //  }
+  update: function ( festivalID, payload, onQueryFinished) {
+    MongoClient.connect(this.url, function (err, db) {
+       if (db) {
+         var collection = db.collection( this.collection )
+         collection.updateOne( { _id: ObjectId( festivalID ) }, { $set: payload }, function ( err, docs ) {
+           if( docs ){
+             onQueryFinished( docs );
+           }
+         });
+       }
+       db.close()
+     }.bind( this ))
+   },
+
+   delete: function ( festivalID, onQueryFinished ) {
+     MongoClient.connect( this.url, function ( err, db ) {
+       if( db ){
+         var collection = db.collection( this.collection );
+
+         collection.deleteOne( { _id: ObjectId( festivalID )}, function( err, docs ) {
+           if( docs ){
+             onQueryFinished( docs );
+           }
+         })
+       }
+     }.bind( this ))
+   }
+
 
 }
 
