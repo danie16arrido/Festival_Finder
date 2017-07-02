@@ -1,5 +1,37 @@
-#main-map {
-  width: 100%;
-  height: 500px; 
+body {
+  margin: 0px 0px 0px 0px;
 }
 
+#main-map {
+  width: 100%;
+  height: 300px;
+}
+
+#header {
+  width: 100%;
+  padding-bottom: 0px;
+  padding-bottom: 0px;
+
+  border: 1px dashed black;
+}
+
+#text-header {
+  font-size: 2em;
+
+  border: 1px dashed black;
+}
+
+#search-bar {
+
+  border: 1px dashed black;
+}
+
+#display-area {
+
+border: 1px dashed black;
+}
+
+#extra {
+
+  border: 1px dashed black;
+}
