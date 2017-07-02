@@ -49,3 +49,9 @@ body {
   flex: 1;
   border: 1px dashed black;
 }
+
+@media screen and (max-width: 640px){
+  #main-map {
+    display: none;
+  }
+}
