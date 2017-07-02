@@ -59,6 +59,19 @@ FestivalQuery.prototype = {
     }.bind(this))
   },
 
+  findByType: function(festivalTypeToFind, onQueryFinished) {
+    MongoClient.connect(this.url, function(err, db) {
+      if (db) {
+        var collection = db.collection(this.collection);
+        collection.findOne({"type": festivalTypeToFind}, function(err,docs) {
+          if (docs) {
+            onQueryFinished(docs);
+          }
+        })
+      }
+    }.bind(this))
+  },
+
   update: function ( festivalID, payload, onQueryFinished ) {
     MongoClient.connect( this.url, function ( err, db ) {
        if ( db ) {

@@ -21,6 +21,14 @@ festivalsRouter.get("/:id", function( req,res ) {
   })
 });
 
+//festival SHOW - filter by festival Type
+festivalsRouter.get("/type/:type", function(req,res) {
+  query.findByType(req.params.type, function(festival) {
+    console.log(festival);
+    res.json(festival);
+  })
+});
+
 //festival SHOW - filter by festival Country
 festivalsRouter.get("/country/:country", function(req,res) {
   query.findByCountry(req.params.country, function(festival) {
