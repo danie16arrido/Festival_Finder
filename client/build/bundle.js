@@ -68,23 +68,29 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 var initialize = function(){
-
   var mapDiv = document.getElementById('main-map');
   var center = { lat: 0, lng: 0 };
 
-  var MapWrapper = __webpack_require__(5);
-  var mainMap = new MapWrapper(mapDiv, center, 2);
+  var MapWrapper = __webpack_require__(4);
+  this.mainMap = new MapWrapper(mapDiv, center, 2);
 
-  //to be delete, only to show how the api call works
-  var FestivalsQuery =  __webpack_require__(4);
+  var FestivalsList = __webpack_require__(3);
   url = 'http://localhost:3000/api/festivals';
-  var list = new FestivalsQuery( url );
-  list.getData( function() {
-    for( ele of list.festivals){
-      console.log(ele.position)
-    }
-  });
-  //to be delete, only to show how the api call works
+  this.list = new FestivalsList( url );
+
+  addMarkers();
+
+}
+
+var addMarkers = function(){
+  this.list.getData( function() {
+    this.list.festivals.forEach(function(ele){
+      var marker = new google.maps.Marker({
+        position: ele.position,
+        map: this.mainMap.googleMap
+      });
+    }.bind(this));
+  }.bind(this));
 
 }
 
@@ -94,8 +100,7 @@ window.addEventListener('load', initialize);
 /***/ }),
 /* 1 */,
 /* 2 */,
-/* 3 */,
-/* 4 */
+/* 3 */
 /***/ (function(module, exports) {
 
 var FestivalsList = function ( url ) {
@@ -125,7 +130,7 @@ module.exports = FestivalsList;
 
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports) {
 
 var MapWrapper = function(container, coords, zoom){

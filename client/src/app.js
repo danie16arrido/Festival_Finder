@@ -1,21 +1,27 @@
 var initialize = function(){
-
   var mapDiv = document.getElementById('main-map');
   var center = { lat: 0, lng: 0 };
 
-  var MapWrapper = require('./MapWrapper');
-  var mainMap = new MapWrapper(mapDiv, center, 2);
+  var MapWrapper = require('./mapWrapper');
+  this.mainMap = new MapWrapper(mapDiv, center, 2);
 
-  //to be delete, only to show how the api call works
-  var FestivalsQuery =  require("./FestivalsList");
+  var FestivalsList = require("./festivalsList");
   url = 'http://localhost:3000/api/festivals';
-  var list = new FestivalsQuery( url );
-  list.getData( function() {
-    for( ele of list.festivals){
-      console.log(ele.position)
-    }
-  });
-  //to be delete, only to show how the api call works
+  this.list = new FestivalsList( url );
+
+  addMarkers();
+
+}
+
+var addMarkers = function(){
+  this.list.getData( function() {
+    this.list.festivals.forEach(function(ele){
+      var marker = new google.maps.Marker({
+        position: ele.position,
+        map: this.mainMap.googleMap
+      });
+    }.bind(this));
+  }.bind(this));
 
 }
 
