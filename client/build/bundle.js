@@ -91,6 +91,7 @@ var MapWrapper = function(container, coords, zoom){
   });
 }
 
+module.exports = MapWrapper;
 
 
 /***/ })
