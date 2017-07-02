@@ -19,21 +19,6 @@ FestivalQuery.prototype = {
     }.bind( this ));
   },
 
-<<<<<<< HEAD
-  add: function(festivalToAdd, onQueryFinished){
-    MongoClient.connect(this.url,function(err,db) {
-      if (db) {
-        var collection = db.collection('festivals');
-        collection.insert(festivalToAdd);
-        collection.find().toArray(function(err,docs) {
-          if (docs) {
-            onQueryFinished(docs);
-          }
-        });
-      } 
-    });
-  }
-=======
   add: function( festivalToAdd, onQueryFinished ){
     MongoClient.connect(this.url,function( err, db ) {
       if ( db ) {
@@ -114,8 +99,6 @@ FestivalQuery.prototype = {
        }
      }.bind( this ))
    }
-
->>>>>>> 642a609422aa776de9dd61f7a398b04b7faf6864
 }
 
 module.exports = FestivalQuery;

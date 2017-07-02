@@ -68,23 +68,29 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 var initialize = function(){
-
   var mapDiv = document.getElementById('main-map');
   var center = { lat: 0, lng: 0 };
 
-  var MapWrapper = __webpack_require__(1);
-  var mainMap = new MapWrapper(mapDiv, center, 2);
+  var MapWrapper = __webpack_require__(4);
+  this.mainMap = new MapWrapper(mapDiv, center, 2);
 
-  //to be delete, only to show how the api call works
-  var FestivalsQuery =  __webpack_require__(2);
+  var FestivalsList = __webpack_require__(3);
   url = 'http://localhost:3000/api/festivals';
-  var list = new FestivalsQuery( url );
-  list.getData( function() {
-    for( ele of list.festivals){
-      console.log(ele.position)
-    }
-  });
-  //to be delete, only to show how the api call works
+  this.list = new FestivalsList( url );
+
+  addMarkers();
+
+}
+
+var addMarkers = function(){
+  this.list.getData( function() {
+    this.list.festivals.forEach(function(ele){
+      var marker = new google.maps.Marker({
+        position: ele.position,
+        map: this.mainMap.googleMap
+      });
+    }.bind(this));
+  }.bind(this));
 
 }
 
@@ -92,21 +98,9 @@ window.addEventListener('load', initialize);
 
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-var MapWrapper = function(container, coords, zoom){
-  this.googleMap = new google.maps.Map(container, {
-    center: coords,
-    zoom: zoom
-  });
-}
-
-module.exports = MapWrapper;
-
-
-/***/ }),
-/* 2 */
+/* 1 */,
+/* 2 */,
+/* 3 */
 /***/ (function(module, exports) {
 
 var FestivalsList = function ( url ) {
@@ -133,6 +127,43 @@ FestivalsList.prototype = {
 }
 
 module.exports = FestivalsList;
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+//source for the color settings in the map
+var styledMapType = new google.maps.StyledMapType(
+  [
+    {"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},
+  {"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},
+  {"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},
+  {"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},
+  {"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},
+  {"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},
+  {"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},
+  {"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}
+  ], {name: 'Styled Map'}
+);
+
+var MapWrapper = function(container, coords, zoom){
+
+  this.googleMap = new google.maps.Map(container, {
+    center: coords,
+    zoom: zoom,
+    //below option needed for colouring maps
+    mapTypeControlOptions: {
+            mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
+                    'styled_map']
+          }
+  });
+  //below option needed for colouring maps
+  this.googleMap.mapTypes.set('styled_map', styledMapType);
+  this.googleMap.setMapTypeId('styled_map');
+}
+
+module.exports = MapWrapper;
 
 
 /***/ })
