@@ -72,11 +72,11 @@ var initialize = function(){
   var mapDiv = document.getElementById('main-map');
   var center = { lat: 0, lng: 0 };
 
-  var MapWrapper = __webpack_require__(5);
+  var MapWrapper = __webpack_require__(1);
   var mainMap = new MapWrapper(mapDiv, center, 2);
 
   //to be delete, only to show how the api call works
-  var FestivalsQuery =  __webpack_require__(4);
+  var FestivalsQuery =  __webpack_require__(2);
   url = 'http://localhost:3000/api/festivals';
   var list = new FestivalsQuery( url );
   list.getData( function() {
@@ -92,10 +92,21 @@ window.addEventListener('load', initialize);
 
 
 /***/ }),
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */
+/* 1 */
+/***/ (function(module, exports) {
+
+var MapWrapper = function(container, coords, zoom){
+  this.googleMap = new google.maps.Map(container, {
+    center: coords,
+    zoom: zoom
+  });
+}
+
+module.exports = MapWrapper;
+
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports) {
 
 var FestivalsList = function ( url ) {
@@ -122,20 +133,6 @@ FestivalsList.prototype = {
 }
 
 module.exports = FestivalsList;
-
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports) {
-
-var MapWrapper = function(container, coords, zoom){
-  this.googleMap = new google.maps.Map(container, {
-    center: coords,
-    zoom: zoom
-  });
-}
-
-module.exports = MapWrapper;
 
 
 /***/ })
