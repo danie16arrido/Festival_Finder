@@ -63,22 +63,37 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports) {
+/******/ ({
+
+/***/ 0:
+/***/ (function(module, exports, __webpack_require__) {
 
 var initialize = function(){
   var mapDiv = document.getElementById('main-map');
   var center = { lat: 0, lng: 0 };
 
+  var MapWrapper = __webpack_require__(5);
   var mainMap = new MapWrapper(mapDiv, center, 2);
 }
 
 window.addEventListener('load', initialize);
 
 
+/***/ }),
+
+/***/ 5:
+/***/ (function(module, exports) {
+
+var MapWrapper = function(container, coords, zoom){
+  this.googleMap = new google.maps.Map(container, {
+    center: coords,
+    zoom: zoom
+  });
+}
+
 
 
 /***/ })
-/******/ ]);
+
+/******/ });
 //# sourceMappingURL=bundle.js.map
