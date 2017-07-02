@@ -37,7 +37,7 @@ FestivalQuery.prototype = {
     MongoClient.connect( this.url,function( err,db ) {
       if ( db ) {
         var collection = db.collection( this.collection );
-        collection.findOne({ _id: ObjectId( festivalIdToFind ) }, function( err, docs) {
+        collection.findOne({ _id: ObjectId( festivalIdToFind )}, function( err, docs) {
           if ( docs ) {
             onQueryFinished( docs );
           }
@@ -46,11 +46,37 @@ FestivalQuery.prototype = {
     }.bind( this ))
   },
 
+  findByCountry: function(festivalCountryToFind, onQueryFinished) {
+    MongoClient.connect(this.url, function(err, db) {
+      if (db) {
+        var collection = db.collection(this.collection);
+        collection.findOne({"country": festivalCountryToFind}, function(err,docs) {
+          if (docs) {
+            onQueryFinished(docs);
+          }
+        })
+      }
+    }.bind(this))
+  },
+
+  findByType: function(festivalTypeToFind, onQueryFinished) {
+    MongoClient.connect(this.url, function(err, db) {
+      if (db) {
+        var collection = db.collection(this.collection);
+        collection.findOne({"type": festivalTypeToFind}, function(err,docs) {
+          if (docs) {
+            onQueryFinished(docs);
+          }
+        })
+      }
+    }.bind(this))
+  },
+
   update: function ( festivalID, payload, onQueryFinished ) {
     MongoClient.connect( this.url, function ( err, db ) {
        if ( db ) {
          var collection = db.collection( this.collection )
-         collection.updateOne( { _id: ObjectId( festivalID ) }, { $set: payload }, function ( err, docs ) {
+         collection.updateOne( { "_id": ObjectId( festivalID ) }, { $set: payload }, function ( err, docs ) {
            if( docs ){
              onQueryFinished( docs );
            }
@@ -65,7 +91,7 @@ FestivalQuery.prototype = {
        if( db ){
          var collection = db.collection( this.collection );
 
-         collection.deleteOne( { _id: ObjectId( festivalID )}, function( err, docs ) {
+         collection.deleteOne( { "_id": ObjectId( festivalID )}, function( err, docs ) {
            if( docs ){
              onQueryFinished( docs );
            }
