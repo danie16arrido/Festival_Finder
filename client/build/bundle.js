@@ -65,18 +65,77 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 var initialize = function(){
+
   var mapDiv = document.getElementById('main-map');
   var center = { lat: 0, lng: 0 };
 
+  var MapWrapper = __webpack_require__(5);
   var mainMap = new MapWrapper(mapDiv, center, 2);
+
+  //to be delete, only to show how the api call works
+  var FestivalsQuery =  __webpack_require__(4);
+  url = 'http://localhost:3000/api/festivals';
+  var list = new FestivalsQuery( url );
+  list.getData( function() {
+    for( ele of list.festivals){
+      console.log(ele.position)
+    }
+  });
+  //to be delete, only to show how the api call works
+
 }
 
 window.addEventListener('load', initialize);
 
 
+/***/ }),
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */
+/***/ (function(module, exports) {
+
+var FestivalsList = function ( url ) {
+  this.url = url;
+  this.festivals = [];
+}
+
+FestivalsList.prototype = {
+
+  getData: function ( callback) {
+    var request = new XMLHttpRequest();
+    request.open('GET', this.url);
+    request.send();
+    request.onreadystatechange = function () {
+      if(request.readyState < 4){
+      } else if( request.readyState === 4 && request.status === 200 ) {
+        var jsonString = request.responseText;
+        var festivals = JSON.parse(jsonString);
+        this.festivals = festivals;
+        callback();
+      }
+    }.bind( this )
+  }
+}
+
+module.exports = FestivalsList;
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+var MapWrapper = function(container, coords, zoom){
+  this.googleMap = new google.maps.Map(container, {
+    center: coords,
+    zoom: zoom
+  });
+}
+
+module.exports = MapWrapper;
 
 
 /***/ })
