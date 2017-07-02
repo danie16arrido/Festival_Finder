@@ -20,7 +20,8 @@
   "homepage": "https://github.com/marialexe/Festival_Finder#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "mongodb": "^2.2.29"
   },
   "devDependencies": {
     "webpack": "^3.0.0"

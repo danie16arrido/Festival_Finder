@@ -8,6 +8,4 @@ var Festival = function(options) {
   this.position = options.position;
 }
 
-
-
 module.exports = Festival;

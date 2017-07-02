@@ -46,7 +46,6 @@ FestivalQuery.prototype = {
     }.bind( this ))
   },
 
-
   update: function ( festivalID, payload, onQueryFinished ) {
     MongoClient.connect( this.url, function ( err, db ) {
        if ( db ) {

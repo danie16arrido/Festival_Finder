@@ -1,3 +1,8 @@
+var Festival = require('./client/src/models/festival.js')
+
+var FestivalQuery = require('./db/festival_query.js');
+var query = new FestivalQuery();
+
 var express = require('express');
 var app = express();
 
@@ -12,6 +17,7 @@ app.use(require("./client/controllers/index"));
 app.use(express.static("client/build"));
 
 //run node.js
+
 app.listen(3000, function () {
   console.log( " listening on 3000" );
 })
