@@ -6,14 +6,11 @@ var query = new FestivalQuery();
 var express = require('express');
 var app = express();
 
-app.use(express.static("client/build"));
-
-var MongoClient = require("mongodb").MongoClient;
-
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+<<<<<<< HEAD
 app.get('/', function( req, res) {
   res.sendFile(__dirname + "/client/build/index.html")
 })
@@ -48,6 +45,15 @@ app.post("/festivals", function(req,res) {
     res.json(festivals);
   })
 })
+=======
+//hand routing to controllers
+app.use(require("./client/controllers/index"));
+
+//setup static files
+app.use(express.static("client/build"));
+
+//run node.js
+>>>>>>> 642a609422aa776de9dd61f7a398b04b7faf6864
 
 
 app.listen(3000, function () {

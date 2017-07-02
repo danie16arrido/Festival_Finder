@@ -1,4 +1,4 @@
-use top_festivals_site;
+use festival_finder;
 
 db.festivals.insert([
 {
