@@ -5,14 +5,13 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+//hand routing to controllers
 app.use(require("./client/controllers/index"));
 
+//setup static files
 app.use(express.static("client/build"));
 
-// app.get('/', function( req, res) {
-//   res.sendFile(__dirname + "/client/build/index.html")
-// })
-
+//run node.js
 app.listen(3000, function () {
   console.log( " listening on 3000" );
 })

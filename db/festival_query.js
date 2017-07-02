@@ -8,25 +8,25 @@ var FestivalQuery = function() {
 
 FestivalQuery.prototype = {
 
-  all: function(onQueryFinished) {
-    MongoClient.connect(this.url,function(err,db) {
-      if(err) return;
+  all: function( onQueryFinished ) {
+    MongoClient.connect( this.url,function( err,db ) {
+      if( err ) return;
       var collection = db.collection( this.collection );
-      collection.find().toArray(function(err,docs) {
-        if (err) return;
-        onQueryFinished(docs);
+      collection.find().toArray(function( err,docs ) {
+        if ( err ) return;
+        onQueryFinished( docs );
       });
     }.bind( this ));
   },
 
-  add: function(festivalToAdd,onQueryFinished){
-    MongoClient.connect(this.url,function(err,db) {
-      if (db) {
+  add: function( festivalToAdd, onQueryFinished ){
+    MongoClient.connect(this.url,function( err, db ) {
+      if ( db ) {
         var collection = db.collection( this.collection );
-        collection.insert(festivalToAdd);
-        collection.find().toArray(function(err,docs) {
-          if (docs) {
-            onQueryFinished(docs);
+        collection.insert( festivalToAdd );
+        collection.find().toArray(function( err,docs ) {
+          if ( docs ) {
+            onQueryFinished( docs );
           }
         })
       }
@@ -37,9 +37,9 @@ FestivalQuery.prototype = {
     MongoClient.connect( this.url,function( err,db ) {
       if ( db ) {
         var collection = db.collection( this.collection );
-        collection.findOne({ _id: ObjectId(festivalIdToFind) }, function( err, docs) {
-          if (docs) {
-            onQueryFinished(docs);
+        collection.findOne({ _id: ObjectId( festivalIdToFind ) }, function( err, docs) {
+          if ( docs ) {
+            onQueryFinished( docs );
           }
         })
       }
@@ -47,9 +47,9 @@ FestivalQuery.prototype = {
   },
 
 
-  update: function ( festivalID, payload, onQueryFinished) {
-    MongoClient.connect(this.url, function (err, db) {
-       if (db) {
+  update: function ( festivalID, payload, onQueryFinished ) {
+    MongoClient.connect( this.url, function ( err, db ) {
+       if ( db ) {
          var collection = db.collection( this.collection )
          collection.updateOne( { _id: ObjectId( festivalID ) }, { $set: payload }, function ( err, docs ) {
            if( docs ){
@@ -74,7 +74,6 @@ FestivalQuery.prototype = {
        }
      }.bind( this ))
    }
-
 
 }
 
