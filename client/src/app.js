@@ -6,7 +6,7 @@ var initialize = function(){
   var MapWrapper = require('./MapWrapper');
   var mainMap = new MapWrapper(mapDiv, center, 2);
 
-  //
+  //to be delete, only to show how the api call works
   var FestivalsQuery =  require("./FestivalsList");
   url = 'http://localhost:3000/api/festivals';
   var list = new FestivalsQuery( url );
@@ -15,6 +15,7 @@ var initialize = function(){
       console.log(ele.position)
     }
   });
+  //to be delete, only to show how the api call works
 
 }
 
