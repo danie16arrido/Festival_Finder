@@ -49,26 +49,6 @@ app.post("/festivals", function(req,res) {
   })
 })
 
-app.put("/festivals/:id", function(req,res) {
-
-  var festivalToUpdate = req.params.id;
-
-  var newFestival = new Festival({
-    title: req.body.title,
-    description: req.body.description,
-    type: req.body.type,
-    start: req.body.start,
-    end: req.body.end,
-    country: req.body.country,
-    position: req.body.position
-  })
-  
-  query.update(festivalToUpdate, newFestival, function(festivals) {
-    res.json(festivals);
-  })
-
-})
-
 
 app.listen(3000, function () {
   console.log( " listening on 3000" );

@@ -29,22 +29,6 @@ FestivalQuery.prototype = {
         });
       } 
     });
-  },
-
-  update: function(festivalToUpdate, newDetails, onQueryFinished){
-    MongoClient.connect(this.url, function(err, db) {
-      if (db) {
-        var collection = db.collection('festivals');
-        collection.replaceOne(festivalToUpdate, newDetails);
-
-        collection.find().toArray(function(err, docs) {
-          if (docs) {
-            onQueryFinished(docs);
-          }
-
-        });
-      }
-    });
   }
 }
 
