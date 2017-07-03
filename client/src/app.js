@@ -5,7 +5,7 @@ var initialize = function(){
   var MapWrapper = require('./mapWrapper');
   var mainMap = new MapWrapper(mapDiv, center, 2);
 
-  mainMap.addMarkers();
+  mainMap.addAllMarkers();
 
 }
 

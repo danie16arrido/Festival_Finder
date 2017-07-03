@@ -1,11 +1,8 @@
 var FestivalsList = require("./festivalsList");
-url = 'http://localhost:3000/api/festivals';
-var list = new FestivalsList( url );
-
 //source for the color settings in the map
 var styledMapType = new google.maps.StyledMapType(
   [
-    {"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},
+  {"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},
   {"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},
   {"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},
   {"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},
@@ -14,18 +11,19 @@ var styledMapType = new google.maps.StyledMapType(
   {"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},
   {"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}
   ], {name: 'Styled Map'}
-);
+  );
 
 var MapWrapper = function(container, coords, zoom){
-
+  this.list = new FestivalsList( null );
+  this.allFestivalsUrl = 'http://localhost:3000/api/festivals';
   this.googleMap = new google.maps.Map(container, {
     center: coords,
     zoom: zoom,
     //below option needed for colouring maps
     mapTypeControlOptions: {
-            mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
-                    'styled_map']
-          }
+      mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
+      'styled_map']
+    }
   });
   //below option needed for colouring maps
   this.googleMap.mapTypes.set('styled_map', styledMapType);
@@ -33,15 +31,24 @@ var MapWrapper = function(container, coords, zoom){
 }
 
 MapWrapper.prototype = {
-  addMarkers: function(){
-    list.getData( function() {
-      list.festivals.forEach(function(ele){
-        var marker = new google.maps.Marker({
-          position: ele.position,
-          map: this.googleMap
-        });
+  addMarker: function(ele){
+    var marker = new google.maps.Marker({
+      position: ele.position,
+      map: this.googleMap
+    });
+  },
+
+  addMarkers: function(url){
+    this.list.url = url;
+    this.list.getData( function() {
+      this.list.festivals.forEach(function(ele){
+        this.addMarker(ele);
       }.bind(this));
     }.bind(this));
+  },
+
+  addAllMarkers: function(){
+    this.addMarkers(this.allFestivalsUrl);
   }
 }
 
