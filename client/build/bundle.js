@@ -71,7 +71,7 @@ var initialize = function(){
   var mapDiv = document.getElementById('main-map');
   var center = { lat: 0, lng: 0 };
 
-  var MapWrapper = __webpack_require__(4);
+  var MapWrapper = __webpack_require__(6);
   this.mainMap = new MapWrapper(mapDiv, center, 2);
 
   var FestivalsList = __webpack_require__(3);
@@ -130,7 +130,9 @@ module.exports = FestivalsList;
 
 
 /***/ }),
-/* 4 */
+/* 4 */,
+/* 5 */,
+/* 6 */
 /***/ (function(module, exports) {
 
 //source for the color settings in the map
