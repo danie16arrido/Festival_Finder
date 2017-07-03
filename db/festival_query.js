@@ -72,6 +72,19 @@ FestivalQuery.prototype = {
     }.bind(this))
   },
 
+  findByRating: function(festivalRatingToFind, onQueryFinished) {
+    MongoClient.connect(this.url, function(err,db) {
+      if (db) {
+        var collection = db.collection(this.collection);
+        collection.findOne({"rating": festivalRatingToFind}, function(err, docs) {
+          if (docs) {
+            onQueryFinished(docs);
+          }
+        })
+      }
+    }.bind(this))
+  },
+
   update: function ( festivalID, payload, onQueryFinished ) {
     MongoClient.connect( this.url, function ( err, db ) {
        if ( db ) {

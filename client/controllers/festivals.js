@@ -37,6 +37,15 @@ festivalsRouter.get("/country/:country", function(req,res) {
   })
 });
 
+//festival SHOW - filter by festival Rating
+festivalsRouter.get("/rating/:rating", function(req,res) {
+  console.log(typeof(req.params.rating));
+  query.findByRating(parseInt(req.params.rating), function(festival) {
+    console.log(festival);
+    res.json(festival);
+  })
+});
+
 //festival CREATE
 festivalsRouter.post("/", function(req,res) {
 
