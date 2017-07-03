@@ -12,7 +12,7 @@ db.festivals.insert([
   "country": "Japan",
   "position": {"lat": 34.685087, "lng": 135.805},
   "rating": 1,
-  "image": "./client/build/images/WAKAKUSA_YAMAYAKI.jpg"
+  "image": "images/WAKAKUSA_YAMAYAKI.jpg"
 },
 
 {
@@ -24,7 +24,7 @@ db.festivals.insert([
   "country": "USA",
   "position": {"lat": 40.646062, "lng": -111.497973},
   "rating": 2,
-  "image": "./client/build/images/SUNDANCE_FILM_FESTIVAL.jpg"
+  "image": "images/SUNDANCE_FILM_FESTIVAL.jpg"
 
 },
 
@@ -37,7 +37,7 @@ db.festivals.insert([
   "country": "Italy",
   "position": {"lat": 45.440847, "lng": 12.315515},
   "rating": 3,
-  "image": "./client/build/images/CARNIVALE_DI_VENEZIA.jpg"
+  "image": "images/CARNIVALE_DI_VENEZIA.jpg"
 },
 
 {
@@ -49,7 +49,7 @@ db.festivals.insert([
   "country": "USA",
   "position": {"lat": 29.951066, "lng": -90.071532},
   "rating": 4,
-  "image": "./client/build/images/MARDI_GRAS.jpg"
+  "image": "images/MARDI_GRAS.jpg"
 },
 
 {
@@ -61,7 +61,7 @@ db.festivals.insert([
   "country": "China",
   "position": {"lat": 25.024831, "lng": 121.740865},
   "rating": 5,
-  "image": "./client/build/images/SKY_LANTERN_FESTIVAL.jpg"
+  "image": "images/SKY_LANTERN_FESTIVAL.jpg"
 },
 
 {
@@ -73,7 +73,7 @@ db.festivals.insert([
   "country": "Brazil",
   "position": {"lat": -22.906847, "lng": -43.172896},
   "rating": 6,
-  "image": "./client/build/images/RIO_CARNIVAL.jpg"
+  "image": "images/RIO_CARNIVAL.jpg"
 },
 
 {
@@ -85,7 +85,7 @@ db.festivals.insert([
   "country": "India",
   "position": {"lat": 28.626371, "lng": 77.373661},
   "rating": 7,
-  "image": "./client/build/images/HOLI.jpg"
+  "image": "images/HOLI.jpg"
 },
 
 {
@@ -97,7 +97,7 @@ db.festivals.insert([
   "country": "USA",
   "position": {"lat": 40.712784, "lng": -74.005941},
   "rating": 8,
-  "image": "./client/build/images/ST_PATRICKS_DAY.jpg"
+  "image": "images/ST_PATRICKS_DAY.jpg"
 },
 
 {
@@ -109,7 +109,7 @@ db.festivals.insert([
   "country": "USA",
   "position": {"lat": 30.267153, "lng": -97.743061},
   "rating": 9,
-  "image": "./client/build/images/SXSW.jpg"
+  "image": "images/SXSW.jpg"
 },
 
 {
@@ -121,7 +121,7 @@ db.festivals.insert([
   "country": "Netherlands",
   "position": {"lat": 52.370216, "lng": 4.895168},
   "rating": 10,
-  "image": "./client/build/images/KINGS_DAY.jpg"
+  "image": "images/KINGS_DAY.jpg"
 },
 
 {
@@ -133,7 +133,7 @@ db.festivals.insert([
   "country": "Austria",
   "position": {"lat": 47.16919, "lng": 11.865146},
   "rating": 11,
-  "image": "./client/build/images/SNOWBOMBING.jpg"
+  "image": "images/SNOWBOMBING.jpg"
 },
 
 {
@@ -145,7 +145,7 @@ db.festivals.insert([
   "country": "Thailand",
   "position": {"lat": 13.756331, "lng": 100.501765},
   "rating": 12,
-  "image": "./client/build/images/SONGKRAN.jpg"
+  "image": "images/SONGKRAN.jpg"
 },
 
 {
@@ -157,7 +157,7 @@ db.festivals.insert([
   "country": "Russia",
   "position": {"lat": 59.93428, "lng": 30.335099},
   "rating": 13,
-  "image": "./client/build/images/STARS_OF_THE_WHITE_NIGHTS.jpg"
+  "image": "images/STARS_OF_THE_WHITE_NIGHTS.jpg"
 },
 
 {
@@ -169,7 +169,7 @@ db.festivals.insert([
   "country": "France",
   "position": {"lat": 43.552847, "lng": 7.017369},
   "rating": 14,
-  "image": "./client/build/images/CANNES_FILM_FESTIVAL.jpg"
+  "image": "images/CANNES_FILM_FESTIVAL.jpg"
 },
 
 {
@@ -181,7 +181,7 @@ db.festivals.insert([
   "country": "UK",
   "position": {"lat": 51.165725, "lng": -2.589688},
   "rating": 15,
-  "image": "./client/build/images/GLASTONBURY.jpg"
+  "image": "images/GLASTONBURY.jpg"
 },
 
 {
@@ -193,7 +193,7 @@ db.festivals.insert([
   "country": "Spain",
   "position": {"lat": 42.576872, "lng": -2.85023},
   "rating": 16,
-  "image": "./client/build/images/SAN_VINO_WINE_FIGHT.jpg"
+  "image": "images/SAN_VINO_WINE_FIGHT.jpg"
 },
 
 {
@@ -205,7 +205,7 @@ db.festivals.insert([
   "country": "UK",
   "position": {"lat": 52.830547, "lng": -1.37884},
   "rating": 17,
-  "image": "./client/build/images/DOWNLOAD.jpg"
+  "image": "images/DOWNLOAD.jpg"
 },
 
 {
@@ -217,7 +217,7 @@ db.festivals.insert([
   "country": "Belgium",
   "position": {"lat": 51.08608, "lng": 4.36633},
   "rating": 18,
-  "image": "./client/build/images/TOMORROWLAND.jpg"
+  "image": "images/TOMORROWLAND.jpg"
 },
 
 {
@@ -229,7 +229,7 @@ db.festivals.insert([
   "country": "USA",
   "position": {"lat": 32.715738, "lng": -117.161084},
   "rating": 19,
-  "image": "./client/build/images/COMIC_CON_INTERNATIONAL.jpg"
+  "image": "images/COMIC_CON_INTERNATIONAL.jpg"
 },
 
 {
@@ -241,7 +241,7 @@ db.festivals.insert([
   "country": "Canada",
   "position": {"lat": 45.501689, "lng": -73.567256},
   "rating": 20,
-  "image": "./client/build/images/JUST_FOR_LAUGHS.jpg"
+  "image": "images/JUST_FOR_LAUGHS.jpg"
 },
 
 {
@@ -253,7 +253,7 @@ db.festivals.insert([
   "country": "Scotland",
   "position": {"lat": 55.953252, "lng": -3.188267},
   "rating": 21,
-  "image": "./client/build/images/EDINBURGH_FRINGE_FESTIVAL.jpg"
+  "image": "images/EDINBURGH_FRINGE_FESTIVAL.jpg"
 },
 
 {
@@ -265,7 +265,7 @@ db.festivals.insert([
   "country": "Spain",
   "position": {"lat": 39.420344, "lng": -0.790133},
   "rating": 22,
-  "image": "./client/build/images/LA_TOMATINA.jpg"
+  "image": "images/LA_TOMATINA.jpg"
 },
 
 {
@@ -277,7 +277,7 @@ db.festivals.insert([
   "country": "UK",
   "position": {"lat": 51.511029, "lng": -0.205389},
   "rating": 23,
-  "image": "./client/build/images/NOTTING_HILL_CARNIVAL.jpg"
+  "image": "images/NOTTING_HILL_CARNIVAL.jpg"
 },
 
 {
@@ -289,7 +289,7 @@ db.festivals.insert([
   "country": "Germany",
   "position": {"lat": 48.135125, "lng": 11.581981},
   "rating": 24,
-  "image": "./client/build/images/OKTOBERFEST.jpg"
+  "image": "images/OKTOBERFEST.jpg"
 },
 
 {
@@ -301,7 +301,7 @@ db.festivals.insert([
   "country": "Saudi Arabia",
   "position": {"lat": 21.389082, "lng": 39.857912},
   "rating": 25,
-  "image": "./client/build/images/HAJJ.jpg"
+  "image": "images/HAJJ.jpg"
 },
 
 {
@@ -313,7 +313,7 @@ db.festivals.insert([
   "country": "USA",
   "position": {"lat": 30.267153, "lng": -97.743061},
   "rating": 26,
-  "image": "./client/build/images/AUSTIN_CITY_LIMITS.jpg"
+  "image": "images/AUSTIN_CITY_LIMITS.jpg"
 },
 
 {
@@ -325,7 +325,7 @@ db.festivals.insert([
   "country": "USA",
   "position": {"lat": 28.538336, "lng": -81.379236},
   "rating": 27,
-  "image": "./client/build/images/EPCOT_FOOD_WINE_FESTIVAL.jpg"
+  "image": "images/EPCOT_FOOD_WINE_FESTIVAL.jpg"
 },
 
 {
@@ -337,7 +337,7 @@ db.festivals.insert([
   "country": "India",
   "position": {"lat": 19.075984, "lng": 72.877656},
   "rating": 28,
-  "image": "./client/build/images/DIWALI.jpg"
+  "image": "images/DIWALI.jpg"
 },
 
 {
@@ -349,7 +349,7 @@ db.festivals.insert([
   "country": "Mexico",
   "position": {"lat": 19.432608, "lng": -99.133208},
   "rating": 29,
-  "image": "./client/build/images/DIA_DE_LOS_MUERTOS.jpg"
+  "image": "images/DIA_DE_LOS_MUERTOS.jpg"
 },
 
 {
@@ -361,7 +361,7 @@ db.festivals.insert([
   "country": "Thailand",
   "position": {"lat": 18.706064, "lng": 98.981716},
   "rating": 30,
-  "image": "./client/build/images/LOY_KRATHONG_YI_PENG.jpg"
+  "image": "images/LOY_KRATHONG_YI_PENG.jpg"
 },
 
 {
@@ -373,7 +373,7 @@ db.festivals.insert([
   "country": "Turkey",
   "position": {"lat": 37.874643, "lng": 32.493155},
   "rating": 31,
-  "image": "./client/build/images/MEVLANA_WHIRLING_DERVISHES.jpg"
+  "image": "images/MEVLANA_WHIRLING_DERVISHES.jpg"
 },
 
 {
@@ -385,7 +385,7 @@ db.festivals.insert([
   "country": "Austria",
   "position": {"lat": 39.040091, "lng": -76.979032},
   "rating": 32,
-  "image": "./client/build/images/KRAMPUSNACHT.jpg"
+  "image": "images/KRAMPUSNACHT.jpg"
 },
 
 {
@@ -397,6 +397,6 @@ db.festivals.insert([
   "country": "Scotland",
   "position": {"lat": 55.953252, "lng": -3.188267},
   "rating": 33,
-  "image": "./client/build/images/HOGMANAY.jpg"
+  "image": "images/HOGMANAY.jpg"
 }
 ]);

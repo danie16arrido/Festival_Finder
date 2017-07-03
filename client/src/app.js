@@ -5,7 +5,13 @@ var initialize = function(){
   var MapWrapper = require('./mapWrapper');
   var mainMap = new MapWrapper(mapDiv, center, 2);
 
+  var ResultsFestivals = require("./resultsFestivals")
+  var results = new ResultsFestivals();
+
+
+
   mainMap.addAllMarkers();
+  results.render();
 
 }
 
