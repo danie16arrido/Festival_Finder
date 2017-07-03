@@ -1,3 +1,7 @@
+var FestivalsList = require("./festivalsList");
+url = 'http://localhost:3000/api/festivals';
+var list = new FestivalsList( url );
+
 //source for the color settings in the map
 var styledMapType = new google.maps.StyledMapType(
   [
@@ -27,5 +31,20 @@ var MapWrapper = function(container, coords, zoom){
   this.googleMap.mapTypes.set('styled_map', styledMapType);
   this.googleMap.setMapTypeId('styled_map');
 }
+
+MapWrapper.prototype = {
+  addMarkers: function(){
+    list.getData( function() {
+      list.festivals.forEach(function(ele){
+        var marker = new google.maps.Marker({
+          position: ele.position,
+          map: this.googleMap
+        });
+      }.bind(this));
+    }.bind(this));
+  }
+}
+
+
 
 module.exports = MapWrapper;

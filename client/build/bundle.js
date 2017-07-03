@@ -72,27 +72,12 @@ var initialize = function(){
   var center = { lat: 0, lng: 0 };
 
   var MapWrapper = __webpack_require__(4);
-  this.mainMap = new MapWrapper(mapDiv, center, 2);
+  var mainMap = new MapWrapper(mapDiv, center, 2);
 
-  var FestivalsList = __webpack_require__(3);
-  url = 'http://localhost:3000/api/festivals';
-  this.list = new FestivalsList( url );
-
-  addMarkers();
+  mainMap.addMarkers();
 
 }
 
-var addMarkers = function(){
-  this.list.getData( function() {
-    this.list.festivals.forEach(function(ele){
-      var marker = new google.maps.Marker({
-        position: ele.position,
-        map: this.mainMap.googleMap
-      });
-    }.bind(this));
-  }.bind(this));
-
-}
 
 window.addEventListener('load', initialize);
 
@@ -131,7 +116,11 @@ module.exports = FestivalsList;
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var FestivalsList = __webpack_require__(3);
+url = 'http://localhost:3000/api/festivals';
+var list = new FestivalsList( url );
 
 //source for the color settings in the map
 var styledMapType = new google.maps.StyledMapType(
@@ -162,6 +151,21 @@ var MapWrapper = function(container, coords, zoom){
   this.googleMap.mapTypes.set('styled_map', styledMapType);
   this.googleMap.setMapTypeId('styled_map');
 }
+
+MapWrapper.prototype = {
+  addMarkers: function(){
+    list.getData( function() {
+      list.festivals.forEach(function(ele){
+        var marker = new google.maps.Marker({
+          position: ele.position,
+          map: this.googleMap
+        });
+      }.bind(this));
+    }.bind(this));
+  }
+}
+
+
 
 module.exports = MapWrapper;
 
