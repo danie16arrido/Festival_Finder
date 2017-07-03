@@ -39,11 +39,17 @@ festivalsRouter.get("/country/:country", function(req,res) {
 
 //festival SHOW - filter by festival Rating
 festivalsRouter.get("/rating/:rating", function(req,res) {
-  console.log(typeof(req.params.rating));
-  query.findByRating(parseInt(req.params.rating), function(festival) {
-    console.log(festival);
+  query.findByRating(parseInt(req.params.rating),function(festival) {
     res.json(festival);
   })
+});
+
+//festival SHOW - display top 6 ratings
+festivalsRouter.get("/ratings/:top", function(req,res) {
+  console.log(req.params.top);
+    query.findTopN( parseInt(req.params.top), function(festival) {
+      res.json(festival);
+    })
 });
 
 //festival CREATE

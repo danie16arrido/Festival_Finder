@@ -37,7 +37,8 @@ FestivalQuery.prototype = {
     MongoClient.connect( this.url,function( err,db ) {
       if ( db ) {
         var collection = db.collection( this.collection );
-        collection.findOne({ _id: ObjectId( festivalIdToFind )}, function( err, docs) {
+        console.log("festivaltofind", festivalIdToFind );
+        collection.findOne({ "_id": ObjectId( festivalIdToFind )}, function( err, docs) {
           if ( docs ) {
             onQueryFinished( docs );
           }
@@ -77,6 +78,20 @@ FestivalQuery.prototype = {
       if (db) {
         var collection = db.collection(this.collection);
         collection.findOne({"rating": festivalRatingToFind}, function(err, docs) {
+          if (docs) {
+            onQueryFinished(docs);
+          }
+        })
+      }
+    }.bind(this))
+  },
+
+  findTopN: function(top, onQueryFinished) {
+    MongoClient.connect(this.url, function(err,db) {
+      if (db) {
+        var collection = db.collection(this.collection);
+        // db.festivals.find().sort({rating:1}).limit(6)
+        collection.find().sort({rating:1}).limit(top).toArray(function(err, docs) {
           if (docs) {
             onQueryFinished(docs);
           }
