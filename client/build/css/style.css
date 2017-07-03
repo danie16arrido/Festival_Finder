@@ -42,10 +42,13 @@ body {
 }
 
 #results {
-  flex: 3;
+  flex: 1;
   border: 1px dashed black;
+  width: 100%;
+  height: 300px;
 }
-#extra {
+
+#details {
   flex: 1;
   border: 1px dashed black;
 }
@@ -55,3 +58,4 @@ body {
     display: none;
   }
 }
+
