@@ -1,5 +1,7 @@
 use festival_finder;
 
+db.dropDatabase();
+
 db.festivals.insert([
 {
   "title": "WAKAKUSA YAMAYAKI",
