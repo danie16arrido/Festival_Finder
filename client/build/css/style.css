@@ -15,10 +15,9 @@ body {
 
 #header {
   order: 1;
-  flex-basis: 100%;
+  width: 100%;
   padding-bottom: 0px;
   padding-bottom: 0px;
-
   border: 1px dashed black;
 }
 
@@ -30,27 +29,13 @@ body {
 
 #search-bar {
   order: 3;
-  flex-basis: 100%;
-  border: 1px dashed black;
+  width: 100%;
 }
 
 #display-area {
   order: 4;
   display: flex;
-  flex-basis: 100%;
-
-}
-
-#results {
-  flex: 1;
-  border: 1px dashed black;
   width: 100%;
-  height: 400px;
-}
-
-#details {
-  flex: 1;
-  border: 1px dashed black;
 }
 
 @media screen and (max-width: 640px){
@@ -59,22 +44,34 @@ body {
   }
 }
 
+#results {
+  flex: 1;
+  width: 100%;
+  height: 400px;
+  background: #d3d3d3;
+}
+
 #results-body {
-  border: 1px dashed red;
+  display: flex;
+  flex-wrap:wrap;
   width: 100%;
   height: 370px;
 }
 
-#festivals {
-  border: 1px solid red;
-  width: 250px;
-  height: 340px;
+#festival-div {
+  width: 100%;
+  overflow-x: scroll;
+  display: flex;
 }
 
 img.festival-image {
-  width: 100%;
+  width: 350px;
   height: 200px;
+  border: 1px solid white
 }
 
-
-
+div.festival {
+  display: flex;
+  flex-flow: column;
+  padding: 10px 30px 10px 30px;
+}
