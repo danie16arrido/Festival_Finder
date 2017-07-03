@@ -8,7 +8,8 @@ db.festivals.insert([
   "start": "2018-01-27",
   "end": "2018-01-27",
   "country": "Japan",
-  "position": {"lat": 34.685087, "lng": 135.805}
+  "position": {"lat": 34.685087, "lng": 135.805},
+  "rating": 1
 },
 
 {
@@ -18,7 +19,9 @@ db.festivals.insert([
   "start": "2018-01-18",
   "end": "2018-01-28",
   "country": "USA",
-  "position": {"lat": 40.646062, "lng": -111.497973}
+  "position": {"lat": 40.646062, "lng": -111.497973},
+  "rating": 2
+
 },
 
 {
@@ -28,7 +31,8 @@ db.festivals.insert([
   "start": "2018-01-27",
   "end": "2018-02-13",
   "country": "Italy",
-  "position": {"lat": 45.440847, "lng": 12.315515}
+  "position": {"lat": 45.440847, "lng": 12.315515},
+  "rating": 3
 },
 
 {
@@ -38,7 +42,8 @@ db.festivals.insert([
   "start": "2018-02-13",
   "end": "2018-02-17",
   "country": "USA",
-  "position": {"lat": 29.951066, "lng": -90.071532}
+  "position": {"lat": 29.951066, "lng": -90.071532},
+  "rating": 4
 },
 
 {
@@ -48,7 +53,8 @@ db.festivals.insert([
   "start": "2018-03-02",
   "end": "2018-03-02",
   "country": "China",
-  "position": {"lat": 25.024831, "lng": 121.740865}
+  "position": {"lat": 25.024831, "lng": 121.740865},
+  "rating": 5
 },
 
 {
@@ -58,7 +64,8 @@ db.festivals.insert([
   "start": "2018-02-09",
   "end": "2018-02-14",
   "country": "Brazil",
-  "position": {"lat": -22.906847, "lng": -43.172896}
+  "position": {"lat": -22.906847, "lng": -43.172896},
+  "rating": 6
 },
 
 {
@@ -68,7 +75,8 @@ db.festivals.insert([
   "start": "2018-03-01",
   "end": "2018-03-02",
   "country": "India",
-  "position": {"lat": 28.626371, "lng": 77.373661}
+  "position": {"lat": 28.626371, "lng": 77.373661},
+  "rating": 7
 },
 
 {
@@ -78,7 +86,8 @@ db.festivals.insert([
   "start": "2018-03-17",
   "end": "2018-03-17",
   "country": "USA",
-  "position": {"lat": 40.712784, "lng": -74.005941}
+  "position": {"lat": 40.712784, "lng": -74.005941},
+  "rating": 8
 },
 
 {
@@ -88,7 +97,8 @@ db.festivals.insert([
   "start": "2018-03-09",
   "end": "2018-03-18",
   "country": "USA",
-  "position": {"lat": 30.267153, "lng": -97.743061}
+  "position": {"lat": 30.267153, "lng": -97.743061},
+  "rating": 9
 },
 
 {
@@ -98,7 +108,8 @@ db.festivals.insert([
   "start": "2018-04-27",
   "end": "2018-04-27",
   "country": "Netherlands",
-  "position": {"lat": 52.370216, "lng": 4.895168}
+  "position": {"lat": 52.370216, "lng": 4.895168},
+  "rating": 10
 },
 
 {
@@ -108,7 +119,8 @@ db.festivals.insert([
   "start": "2018-04-03",
   "end": "2018-04-08",
   "country": "Austria",
-  "position": {"lat": 47.16919, "lng": 11.865146}
+  "position": {"lat": 47.16919, "lng": 11.865146},
+  "rating": 11
 },
 
 {
@@ -118,7 +130,8 @@ db.festivals.insert([
   "start": "2018-04-13",
   "end": "2018-04-15",
   "country": "Thailand",
-  "position": {"lat": 13.756331, "lng": 100.501765}
+  "position": {"lat": 13.756331, "lng": 100.501765},
+  "rating": 12
 },
 
 {
@@ -128,7 +141,8 @@ db.festivals.insert([
   "start": "2018-05-26",
   "end": "2018-06-23",
   "country": "Russia",
-  "position": {"lat": 59.93428, "lng": 30.335099}
+  "position": {"lat": 59.93428, "lng": 30.335099},
+  "rating": 13
 },
 
 {
@@ -138,7 +152,8 @@ db.festivals.insert([
   "start": "2018-05-09",
   "end": "2018-06-20",
   "country": "France",
-  "position": {"lat": 43.552847, "lng": 7.017369}
+  "position": {"lat": 43.552847, "lng": 7.017369},
+  "rating": 14
 },
 
 {
@@ -148,7 +163,8 @@ db.festivals.insert([
   "start": "2019-06-21",
   "end": "2019-06-25",
   "country": "UK",
-  "position": {"lat": 51.165725, "lng": -2.589688}
+  "position": {"lat": 51.165725, "lng": -2.589688},
+  "rating": 15
 },
 
 {
@@ -158,7 +174,8 @@ db.festivals.insert([
   "start": "2018-06-28",
   "end": "2018-06-30",
   "country": "Spain",
-  "position": {"lat": 42.576872, "lng": -2.85023}
+  "position": {"lat": 42.576872, "lng": -2.85023},
+  "rating": 16
 },
 
 {
@@ -168,7 +185,8 @@ db.festivals.insert([
   "start": "2018-06-08",
   "end": "2018-06-10",
   "country": "UK",
-  "position": {"lat": 52.830547, "lng": -1.37884}
+  "position": {"lat": 52.830547, "lng": -1.37884},
+  "rating": 17
 },
 
 {
@@ -178,7 +196,8 @@ db.festivals.insert([
   "start": "2017-07-21",
   "end": "2017-07-30",
   "country": "Belgium",
-  "position": {"lat": 51.08608, "lng": 4.36633}
+  "position": {"lat": 51.08608, "lng": 4.36633},
+  "rating": 18
 },
 
 {
@@ -188,7 +207,8 @@ db.festivals.insert([
   "start": "2017-07-20",
   "end": "2017-07-23",
   "country": "USA",
-  "position": {"lat": 32.715738, "lng": -117.161084}
+  "position": {"lat": 32.715738, "lng": -117.161084},
+  "rating": 19
 },
 
 {
@@ -198,7 +218,8 @@ db.festivals.insert([
   "start": "2017-07-14",
   "end": "2017-07-30",
   "country": "Canada",
-  "position": {"lat": 45.501689, "lng": -73.567256}
+  "position": {"lat": 45.501689, "lng": -73.567256},
+  "rating": 20
 },
 
 {
@@ -208,7 +229,8 @@ db.festivals.insert([
   "start": "2017-08-04",
   "end": "2017-08-28",
   "country": "Scotland",
-  "position": {"lat": 55.953252, "lng": -3.188267}
+  "position": {"lat": 55.953252, "lng": -3.188267},
+  "rating": 21
 },
 
 {
@@ -218,7 +240,8 @@ db.festivals.insert([
   "start": "2017-08-30",
   "end": "2017-08-30",
   "country": "Spain",
-  "position": {"lat": 39.420344, "lng": -0.790133}
+  "position": {"lat": 39.420344, "lng": -0.790133},
+  "rating": 22
 },
 
 {
@@ -228,7 +251,8 @@ db.festivals.insert([
   "start": "2017-08-30",
   "end": "2017-08-30",
   "country": "UK",
-  "position": {"lat": 51.511029, "lng": -0.205389}
+  "position": {"lat": 51.511029, "lng": -0.205389},
+  "rating": 23
 },
 
 {
@@ -238,7 +262,8 @@ db.festivals.insert([
   "start": "2017-09-16",
   "end": "2017-10-03",
   "country": "Germany",
-  "position": {"lat": 48.135125, "lng": 11.581981}
+  "position": {"lat": 48.135125, "lng": 11.581981},
+  "rating": 24
 },
 
 {
@@ -248,7 +273,8 @@ db.festivals.insert([
   "start": "2017-08-30",
   "end": "2017-09-04",
   "country": "Saudi Arabia",
-  "position": {"lat": 21.389082, "lng": 39.857912}
+  "position": {"lat": 21.389082, "lng": 39.857912},
+  "rating": 25
 },
 
 {
@@ -258,7 +284,8 @@ db.festivals.insert([
   "start": "2017-10-06",
   "end": "2017-10-08",
   "country": "USA",
-  "position": {"lat": 30.267153, "lng": -97.743061}
+  "position": {"lat": 30.267153, "lng": -97.743061},
+  "rating": 26
 },
 
 {
@@ -268,7 +295,8 @@ db.festivals.insert([
   "start": "2017-08-31",
   "end": "2017-11-13",
   "country": "USA",
-  "position": {"lat": 28.538336, "lng": -81.379236}
+  "position": {"lat": 28.538336, "lng": -81.379236},
+  "rating": 27
 },
 
 {
@@ -278,7 +306,8 @@ db.festivals.insert([
   "start": "2017-10-19",
   "end": "2017-10-23",
   "country": "India",
-  "position": {"lat": 19.075984, "lng": 72.877656}
+  "position": {"lat": 19.075984, "lng": 72.877656},
+  "rating": 28
 },
 
 {
@@ -288,7 +317,8 @@ db.festivals.insert([
   "start": "2017-10-31",
   "end": "2017-11-02",
   "country": "Mexico",
-  "position": {"lat": 19.432608, "lng": -99.133208}
+  "position": {"lat": 19.432608, "lng": -99.133208},
+  "rating": 29
 },
 
 {
@@ -298,7 +328,8 @@ db.festivals.insert([
   "start": "2017-11-04",
   "end": "2017-11-05",
   "country": "Thailand",
-  "position": {"lat": 18.706064, "lng": 98.981716}
+  "position": {"lat": 18.706064, "lng": 98.981716},
+  "rating": 30
 },
 
 {
@@ -308,7 +339,8 @@ db.festivals.insert([
   "start": "2017-12-07",
   "end": "2017-12-17",
   "country": "Turkey",
-  "position": {"lat": 37.874643, "lng": 32.493155}
+  "position": {"lat": 37.874643, "lng": 32.493155},
+  "rating": 31
 },
 
 {
@@ -318,7 +350,8 @@ db.festivals.insert([
   "start": "2017-12-05",
   "end": "2017-12-05",
   "country": "Austria",
-  "position": {"lat": 39.040091, "lng": -76.979032}
+  "position": {"lat": 39.040091, "lng": -76.979032},
+  "rating": 32
 },
 
 {
@@ -328,6 +361,7 @@ db.festivals.insert([
   "start": "2017-12-30",
   "end": "2018-01-01",
   "country": "Scotland",
-  "position": {"lat": 55.953252, "lng": -3.188267}
+  "position": {"lat": 55.953252, "lng": -3.188267},
+  "rating": 33
 }
 ]);
