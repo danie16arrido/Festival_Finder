@@ -71,8 +71,13 @@ var initialize = function(){
   var mapDiv = document.getElementById('main-map');
   var center = { lat: 0, lng: 0 };
 
+<<<<<<< HEAD
   var MapWrapper = __webpack_require__(4);
   var mainMap = new MapWrapper(mapDiv, center, 2);
+=======
+  var MapWrapper = __webpack_require__(6);
+  this.mainMap = new MapWrapper(mapDiv, center, 2);
+>>>>>>> 42d10b4c8b283e67d878870f82c10cf29585a387
 
   mainMap.addAllMarkers();
 
@@ -115,8 +120,15 @@ module.exports = FestivalsList;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
+=======
+/* 4 */,
+/* 5 */,
+/* 6 */
+/***/ (function(module, exports) {
+>>>>>>> 42d10b4c8b283e67d878870f82c10cf29585a387
 
 var FestivalsList = __webpack_require__(3);
 //source for the color settings in the map
