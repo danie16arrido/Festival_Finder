@@ -8,7 +8,7 @@ var initialize = function(){
   var ResultsFestivals = require("./resultsFestivals")
   var results = new ResultsFestivals();
 
-  var types = ["Film", "Music", "Carnival", "Religious/Traditional", "New Year", "Food and Drink", "Scenic Arts", "Featured"];
+  var types = ["Film", "Music", "Carnival", "Religious Traditional", "New Year", "Food and Drink", "Scenic Arts", "Featured"];
   var fav = "Favourites";
 
 
@@ -26,4 +26,3 @@ var initialize = function(){
 
 
 window.addEventListener('load', initialize);
-
