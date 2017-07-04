@@ -27,5 +27,12 @@ usersRouter.post("/:userId", function(req,res) {
   })
 });
 
+//delete festival from user's favourites DELETE
+usersRouter.delete("/:userId/:festivalId", function ( req, res ) {
+  queryUsers.delete( req.params.userId, req.params.festivalId, function ( docs ) {
+    res.json( docs );
+  })
+});
+
 
 module.exports = usersRouter;

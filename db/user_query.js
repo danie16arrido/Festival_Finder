@@ -43,6 +43,20 @@ UserQuery.prototype = {
         })
       }
     }.bind( this ))
+  },
+
+  delete: function ( userId, festivalToDelete, onQueryFinished ) {
+    MongoClient.connect( this.url, function ( err, db ) {
+      if( db ){
+        var collection = db.collection( this.collection );
+        collection.update( {"_id": ObjectId(userId) }, {$pull: { myFestivals: { id: parseInt(festivalToDelete) } } } );
+        collection.find( {"_id": ObjectId( userId ) }).toArray(function( err,docs ) {
+          if ( docs ) {
+            onQueryFinished( docs );
+          }
+        })
+      }
+    }.bind( this ))
   }
 
 }
