@@ -36,19 +36,33 @@ MapWrapper.prototype = {
       position: ele.position,
       map: this.googleMap
     });
+    return marker;
   },
 
   addMarkers: function(url){
     this.list.url = url;
     this.list.getData( function() {
       this.list.festivals.forEach(function(ele){
-        this.addMarker(ele);
+        // this.addMarker(ele);
+        this.addInfoWindow(ele);
       }.bind(this));
     }.bind(this));
   },
 
   addAllMarkers: function(){
     this.addMarkers(this.allFestivalsUrl);
+  },
+
+  addInfoWindow: function(festival) {
+    var marker = this.addMarker(festival);
+    marker.addListener('click', function() {
+      var infoWindow = new google.maps.InfoWindow({
+        content: festival.title + ", " + festival.country,
+
+      });
+      infoWindow.open(this.map, marker); 
+      setTimeout(function(){ infoWindow.close()}, 5000);
+    });
   }
 }
 
