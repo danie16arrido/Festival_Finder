@@ -6,7 +6,7 @@ var SearchButton = function(typesFromApp, fav){
 SearchButton.prototype = {
 
   renderButton: function(type) {
-    var appendDiv = document.createElement('appendDiv');
+    var appendDiv = document.createElement('div');
     appendDiv.classList.add('search-div');
 
     var button = document.createElement('button');
