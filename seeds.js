@@ -11,7 +11,7 @@ db.festivals.insert([
   "end": "2018-01-27",
   "country": "Japan",
   "position": {"lat": 34.685087, "lng": 135.805},
-  "rating": 1,
+  "rating": 7,
   "image": "images/WAKAKUSA_YAMAYAKI.jpg"
 },
 
@@ -23,7 +23,7 @@ db.festivals.insert([
   "end": "2018-01-28",
   "country": "USA",
   "position": {"lat": 40.646062, "lng": -111.497973},
-  "rating": 2,
+  "rating": 8,
   "image": "images/SUNDANCE_FILM_FESTIVAL.jpg"
 
 },
@@ -48,7 +48,7 @@ db.festivals.insert([
   "end": "2018-02-17",
   "country": "USA",
   "position": {"lat": 29.951066, "lng": -90.071532},
-  "rating": 4,
+  "rating": 14,
   "image": "images/MARDI_GRAS.jpg"
 },
 
@@ -60,7 +60,7 @@ db.festivals.insert([
   "end": "2018-03-02",
   "country": "China",
   "position": {"lat": 25.024831, "lng": 121.740865},
-  "rating": 5,
+  "rating": 18,
   "image": "images/SKY_LANTERN_FESTIVAL.jpg"
 },
 
@@ -72,7 +72,7 @@ db.festivals.insert([
   "end": "2018-02-14",
   "country": "Brazil",
   "position": {"lat": -22.906847, "lng": -43.172896},
-  "rating": 6,
+  "rating": 21,
   "image": "images/RIO_CARNIVAL.jpg"
 },
 
@@ -84,7 +84,7 @@ db.festivals.insert([
   "end": "2018-03-02",
   "country": "India",
   "position": {"lat": 28.626371, "lng": 77.373661},
-  "rating": 7,
+  "rating": 1,
   "image": "images/HOLI.jpg"
 },
 
@@ -96,7 +96,7 @@ db.festivals.insert([
   "end": "2018-03-17",
   "country": "USA",
   "position": {"lat": 40.712784, "lng": -74.005941},
-  "rating": 8,
+  "rating": 2,
   "image": "images/ST_PATRICKS_DAY.jpg"
 },
 
@@ -168,7 +168,7 @@ db.festivals.insert([
   "end": "2018-06-20",
   "country": "France",
   "position": {"lat": 43.552847, "lng": 7.017369},
-  "rating": 14,
+  "rating": 4,
   "image": "images/CANNES_FILM_FESTIVAL.jpg"
 },
 
@@ -216,7 +216,7 @@ db.festivals.insert([
   "end": "2017-07-30",
   "country": "Belgium",
   "position": {"lat": 51.08608, "lng": 4.36633},
-  "rating": 18,
+  "rating": 5,
   "image": "images/TOMORROWLAND.jpg"
 },
 
@@ -252,7 +252,7 @@ db.festivals.insert([
   "end": "2017-08-28",
   "country": "Scotland",
   "position": {"lat": 55.953252, "lng": -3.188267},
-  "rating": 21,
+  "rating": 6,
   "image": "images/EDINBURGH_FRINGE_FESTIVAL.jpg"
 },
 

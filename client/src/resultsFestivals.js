@@ -1,8 +1,7 @@
 var ResultsFestivals = function() {
   var FestivalsList = require("./festivalsList");
-  var url = 'http://localhost:3000/api/festivals'
+  var url = 'http://localhost:3000/api/festivals/ratings/6'
   this.list = new FestivalsList(url);
-  // this.selectedIndex = 0;
 }
 
 ResultsFestivals.prototype = {
