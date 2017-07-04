@@ -400,3 +400,12 @@ db.festivals.insert([
   "image": "images/HOGMANAY.jpg"
 }
 ]);
+
+db.users.insert([
+  { name: "Daniel", last_name: "Garrido", myFestivals: [{id:3},{id:4}]},
+  { name: "Juan", last_name: "Cortez", myFestivals: [{id:1}] }
+]);
+
+db.festivals.createIndex( { type: 1 } );
+db.festivals.createIndex( { country: 1 } );
+db.festivals.createIndex( { rating: 1 } );

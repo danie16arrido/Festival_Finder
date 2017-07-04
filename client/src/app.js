@@ -9,6 +9,7 @@ var initialize = function(){
   var results = new ResultsFestivals();
 
   var types = ["Film", "Music", "Carnival", "Religious/Traditional", "New Year", "Food and Drink", "Featured"];
+  var fav = "Favourites";
 
 
   results.renderSliderFestivals('http://localhost:3000/api/festivals/country/Scotland');
@@ -16,11 +17,12 @@ var initialize = function(){
   mainMap.addAllMarkers();
 
   var SearchButton = require('./searchButtons.js')
-  var buttons = new SearchButton(types);
+  var buttons = new SearchButton(types, fav);
 
 
 
   buttons.renderAllButtons();
+  buttons.renderFavButton();
 
 }
 
