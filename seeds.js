@@ -55,7 +55,7 @@ db.festivals.insert([
 {
   "title": "SKY LANTERN FESTIVAL",
   "description": "According to the elders of Pingxi, the Sky Lantern Festival originated in the Xing Dynasty, more than two thousand years ago. At that time, bands of outlaws frequently raided the lowland villages, forcing residents to seek refuge in the mountains. Village watchmen used “fire balloons” as signals to inform the residents that their houses were safe once again and when those hiding in the hills saw the celestial flares, they knew it was time to go home. Today these lanterns have two main purposes. One: they display scribbled messages of the hopes and dreams of the purchaser who then release them into the night sky by the power of fire; and Two: they represent the end of the Chinese New Year period and their release symbolizes the shedding of outdated ways and embracing the future.",
-  "type": "New Year",
+  "type": "New_Year",
   "start": "2018-03-02",
   "end": "2018-03-02",
   "country": "China",
@@ -139,7 +139,7 @@ db.festivals.insert([
 {
   "title": "SONGKRAN",
   "description": "In Thailand the celebration of New Year is referred to as Songkran. The exact date varies every year depending on the lunar cycle but usually happens sometime in April. The traditional celebration of Songkran is to return to your families and pay respect to your elders by spraying a little scented water on their hands. However, Songkran has changed over the years and has become a public 3 day water fight. It is near impossible to walk down the street without being sprayed by water. Shop owners will sit outside their shops with giant containers of ice water ready to throw at anyone walking by, while others will roam the streets, sometimes in tuk tuks! Tourists from all over the world will travel to Thailand to take part in these celebrations.",
-  "type": "New Year",
+  "type": "New_Year",
   "start": "2018-04-13",
   "end": "2018-04-15",
   "country": "Thailand",
@@ -151,7 +151,7 @@ db.festivals.insert([
 {
   "title": "STARS OF THE WHITE NIGHTS",
   "description": "White Nights isn’t really one festival but a collection of events around the longest days of the year, from mid-­May to mid-­July. This festival is an extravaganza of the arts — music, opera, ballet, film and outdoor celebrations including the Scarlet Sails, a fleet of red­-sailed, tall ships with a gunpowder-packed fireworks show, Russian style. Long walks along the River Neva in almost constant daylight reveal roving gypsy bands, jugglers, sword swallowers, fire eaters, even stoic Russian mimes who might surprise you with their humor.",
-  "type": "Scenic Arts",
+  "type": "Scenic_Arts",
   "start": "2018-05-26",
   "end": "2018-06-23",
   "country": "Russia",
@@ -187,7 +187,7 @@ db.festivals.insert([
 {
   "title": "SAN VINO WINE FIGHT",
   "description": "Spain’s annual Batalla de Vino, or Wine Battle, must be one of Europe’s most unique and underrated annual festivals. Each year in the small village of Haro, thousands of revelers emerge to a hill just after sunrise to wage war on each other using red wine as their weapon! Water guns, insect sprayers, and buckets are all filled with the deep red liquid that leaves attendees stained from head to toe. This wild event takes place on the morning of June 29th each year. But the night before is when the party really gets started. The festivities draw a mostly local crowd, making it a fun cultural experience as you stay up all night drinking and dancing in the streets until the wine fight begins in the early morning hours.",
-  "type": "Food and Drink",
+  "type": "Food_and_Drink",
   "start": "2018-06-28",
   "end": "2018-06-30",
   "country": "Spain",
@@ -247,7 +247,7 @@ db.festivals.insert([
 {
   "title": "EDINBURGH FRINGE FESTIVAL",
   "description": "Theater, music, film, comedy, dance, musicals, spoken word, street performances, and exhibitions - Edinburgh Festival Fringe has it all. Known as the world’s largest arts festival, each August the Fringe takes over Scotland’s capital, drawing artists, performers, and attendees from around the world. Fringe developed 70 years ago (as an alternative to the selective Edinburgh International Festival) and is an open-access festival, meaning that anyone can participate or perform. You can either buy tickets in advance or just walk down the bustling Royal Mile and let the many promoters guide you to a cheap or free show. The festive atmosphere of the entire city is truly contagious and something to experience at least once!",
-  "type": "Scenic Arts",
+  "type": "Scenic_Arts",
   "start": "2017-08-04",
   "end": "2017-08-28",
   "country": "Scotland",
@@ -283,7 +283,7 @@ db.festivals.insert([
 {
   "title": "OKTOBERFEST",
   "description": "Every beer lover simply must attend the Oktoberfest once in their life! I recently checked it off my bucket list with great glee. I was sure there was no way I was going to drink TWO of those huge steins you see in pictures, but two were included with admission so two it was. No problem! Tent hopping is part of the fun and that means drinking even MORE beer. No problem! But thankfully there is a cafe tent where you can sober up with coffee and Black Forest cake, and then either dive in again or go back to your room in Munich to recover.",
-  "type": "Food and Drink",
+  "type": "Food_and_Drink",
   "start": "2017-09-16",
   "end": "2017-10-03",
   "country": "Germany",
@@ -319,7 +319,7 @@ db.festivals.insert([
 {
   "title": "EPCOT FOOD & WINE FESTIVAL",
   "description": "As a Pastry Chef, self proclaimed ‘foodie,’ and lover of all things Disney there is nothing I look forward to more than The EPCOT International Food & Wine Festival. Although the dates vary slightly each year the festival typically runs from September to mid-November, which prompts my singing of ‘It’s The Most Wonderful Time Of The Year’ a little earlier than most because, well, it is the most wonderful time of the year at Disney! On top of the 11 countries permanently represented in EPCOT’s World Showcase, the festival highlights food and beverage offerings from 19 other nations at themed stalls. In addition, they offer seminars and demonstrations from famous chefs, wine tastings, and even film ABC’s The CHEW on site.",
-  "type": "Food and Drink",
+  "type": "Food_and_Drink",
   "start": "2017-08-31",
   "end": "2017-11-13",
   "country": "USA",
@@ -391,7 +391,7 @@ db.festivals.insert([
 {
   "title": "HOGMANAY",
   "description": "Picture the core of the city bustling with people partying, jumping from one stage to the other as 5 bands are usually playing at the same time all over the place, staring at fireworks as midnight approaches, having a blast even when the weather doesn’t help and you will start understanding how much fun it is. And then add popular dances, an ice rink, Christmas markets, a ferris wheel, a torchlight procession on the 30th, a proper music festival on the 31st, the nuts Loony Dook race that ends up swimming in the not so warm waters by the Forth bridge on the outskirts of the city as weel as an art explosion taking over 9 bizarre venues called Scot:Lands.",
-  "type": "New Year",
+  "type": "New_Year",
   "start": "2017-12-30",
   "end": "2018-01-01",
   "country": "Scotland",
