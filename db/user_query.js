@@ -16,7 +16,21 @@ UserQuery.prototype = {
         onQueryFinished( docs );
       });
     }.bind( this ));
-  }
+  },
+
+  userFestivals: function( userIDtoFind, onQueryFinished ){
+    MongoClient.connect( this.url,function( err,db ) {
+      if ( db ) {
+        var collection = db.collection( this.collection );
+        collection.findOne({ "_id": ObjectId( userIDtoFind )}, function( err, docs) {
+          if ( docs ) {
+            onQueryFinished( docs.myFestivals );
+          }
+        })
+      }
+    }.bind( this ))
+  },
+
 }
 
 module.exports = UserQuery;
