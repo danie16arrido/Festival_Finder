@@ -9,30 +9,11 @@ var initialize = function(){
 
   mainMap.addAllMarkers();
 
-  // searchButtons.render();
+  var SearchButton = require('./searchButtons.js')
+  var buttons = new SearchButton(types);
 
-  // var SearchButton = require('./searchButton.js')
-  // var buttons = new SearchButton();
+  buttons.renderAllButtons();
 
-  var renderAllButtons = function(){
-    types.forEach(function(type) {
-      renderButton(type);
-    })
-  }
-
-  var renderButton = function(type) {
-    var appendDiv = document.createElement('appendDiv');
-    appendDiv.classList.add('search-div');
-    
-    var button = document.createElement('button');
-    button.innerText = type + " Festivals";
-
-    appendDiv.appendChild(button);
-
-    var searchDiv = document.getElementById('search-bar');
-    searchDiv.appendChild(appendDiv);
-  }
-  renderAllButtons();
 }
 
 

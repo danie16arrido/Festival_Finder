@@ -78,30 +78,11 @@ var initialize = function(){
 
   mainMap.addAllMarkers();
 
-  // searchButtons.render();
+  var SearchButton = __webpack_require__(3)
+  var buttons = new SearchButton(types);
 
-  // var SearchButton = require('./searchButton.js')
-  // var buttons = new SearchButton();
+  buttons.renderAllButtons();
 
-  var renderAllButtons = function(){
-    types.forEach(function(type) {
-      renderButton(type);
-    })
-  }
-
-  var renderButton = function(type) {
-    var appendDiv = document.createElement('appendDiv');
-    appendDiv.classList.add('search-div');
-    
-    var button = document.createElement('button');
-    button.innerText = type + " Festivals";
-
-    appendDiv.appendChild(button);
-
-    var searchDiv = document.getElementById('search-bar');
-    searchDiv.appendChild(appendDiv);
-  }
-  renderAllButtons();
 }
 
 
@@ -200,6 +181,41 @@ FestivalsList.prototype = {
 }
 
 module.exports = FestivalsList;
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+var SearchButton = function(typesFromApp){
+  this.types = typesFromApp;
+}
+
+SearchButton.prototype = {
+
+  renderButton: function(type) {
+    var appendDiv = document.createElement('appendDiv');
+    appendDiv.classList.add('search-div');
+    
+    var button = document.createElement('button');
+    button.innerText = type + " Festivals";
+
+    appendDiv.appendChild(button);
+
+    var searchDiv = document.getElementById('search-bar');
+    searchDiv.appendChild(appendDiv);
+  },
+
+  renderAllButtons: function(){
+    console.log(this.types);
+    this.types.forEach(function(type) {
+      console.log(type);
+      this.renderButton(type);
+    }.bind(this))
+  }
+}
+
+module.exports = SearchButton;
 
 
 /***/ })
