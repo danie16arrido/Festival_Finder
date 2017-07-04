@@ -105,7 +105,7 @@ div.overlay {
   border-radius: 5%;
 }
 
-div.overlayBody {
+div.overlay-body {
   text-align: left;
   color: white;
   font-size: 13px;
@@ -114,5 +114,9 @@ div.overlayBody {
   left: 40%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+}
+
+button.fav-button {
+  
 }
 
