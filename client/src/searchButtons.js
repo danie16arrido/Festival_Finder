@@ -11,6 +11,8 @@ SearchButton.prototype = {
     var button = document.createElement('button');
     button.innerText = type + " Festivals";
 
+    button.addEventListener('click', this.handleButtonClick);
+
     appendDiv.appendChild(button);
 
     var searchDiv = document.getElementById('search-bar');
@@ -18,11 +20,13 @@ SearchButton.prototype = {
   },
 
   renderAllButtons: function(){
-    console.log(this.types);
     this.types.forEach(function(type) {
-      console.log(type);
       this.renderButton(type);
     }.bind(this))
+  },
+
+  handleButtonClick: function() {
+   console.log("button clicked");
   }
 }
 
