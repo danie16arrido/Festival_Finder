@@ -51,7 +51,8 @@ FestivalQuery.prototype = {
     MongoClient.connect(this.url, function(err, db) {
       if (db) {
         var collection = db.collection(this.collection);
-        collection.findOne({"country": festivalCountryToFind}, function(err,docs) {
+        collection.find({ country: festivalCountryToFind } ).toArray(function( err,docs ) {
+        // collection.findOne({"country": festivalCountryToFind}, function(err,docs) {
           if (docs) {
             onQueryFinished(docs);
           }
@@ -61,30 +62,32 @@ FestivalQuery.prototype = {
   },
 
   findByType: function(festivalTypeToFind, onQueryFinished) {
-    MongoClient.connect(this.url, function(err, db) {
-      if (db) {
-        var collection = db.collection(this.collection);
-        collection.findOne({"type": festivalTypeToFind}, function(err,docs) {
-          if (docs) {
-            onQueryFinished(docs);
-          }
-        })
-      }
-    }.bind(this))
-  },
+      MongoClient.connect(this.url, function(err, db) {
+        if (db) {
+          var collection = db.collection(this.collection);
+          collection.find({ type: festivalTypeToFind } ).toArray(function( err,docs ) {
+          // collection.find({ type: festivalTypeToFind }, function(err,docs) {
+            if (docs) {
+              onQueryFinished(docs);
+            }
+          })
+        }
+      }.bind(this))
+    },
 
-  findByRating: function(festivalRatingToFind, onQueryFinished) {
-    MongoClient.connect(this.url, function(err,db) {
-      if (db) {
-        var collection = db.collection(this.collection);
-        collection.findOne({"rating": festivalRatingToFind}, function(err, docs) {
-          if (docs) {
-            onQueryFinished(docs);
-          }
-        })
-      }
-    }.bind(this))
-  },
+    findByRating: function(festivalRatingToFind, onQueryFinished) {
+      MongoClient.connect(this.url, function(err,db) {
+        if (db) {
+          var collection = db.collection(this.collection);
+          collection.find({ rating: festivalRatingToFind } ).toArray(function( err,docs ) {
+          // collection.find({ rating: festivalRatingToFind }, function(err, docs) {
+            if (docs) {
+              onQueryFinished(docs);
+            }
+          })
+        }
+      }.bind(this))
+    },
 
   findTopN: function(top, onQueryFinished) {
     MongoClient.connect(this.url, function(err,db) {
