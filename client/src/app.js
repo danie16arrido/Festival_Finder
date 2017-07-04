@@ -11,15 +11,14 @@ var initialize = function(){
   var types = ["Film", "Music", "Carnival", "Religious/Traditional", "New Year", "Food and Drink", "Featured"];
 
 
-  results.render();
+  results.renderSliderFestivals('http://localhost:3000/api/festivals/country/Scotland');
 
   mainMap.addAllMarkers();
 
   var SearchButton = require('./searchButtons.js')
   var buttons = new SearchButton(types);
 
-  var FestivalQuery = require('../db/festival_query.js');
-  var query = new FestivalQuery();
+
 
   buttons.renderAllButtons();
 
