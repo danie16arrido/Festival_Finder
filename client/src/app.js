@@ -5,9 +5,17 @@ var initialize = function(){
   var MapWrapper = require('./mapWrapper');
   var mainMap = new MapWrapper(mapDiv, center, 2);
 
+  var types = ["Film", "Music", "Carnival", "Religious/Traditional", "New Year", "Food and Drink", "Featured"];
+
   mainMap.addAllMarkers();
+
+  var SearchButton = require('./searchButtons.js')
+  var buttons = new SearchButton(types);
+
+  buttons.renderAllButtons();
 
 }
 
 
 window.addEventListener('load', initialize);
+

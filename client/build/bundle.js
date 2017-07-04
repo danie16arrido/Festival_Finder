@@ -71,10 +71,17 @@ var initialize = function(){
   var mapDiv = document.getElementById('main-map');
   var center = { lat: 0, lng: 0 };
 
-  var MapWrapper = __webpack_require__(4);
+  var MapWrapper = __webpack_require__(1);
   var mainMap = new MapWrapper(mapDiv, center, 2);
 
+  var types = ["Film", "Music", "Carnival", "Religious/Traditional", "New Year", "Food and Drink", "Featured"];
+
   mainMap.addAllMarkers();
+
+  var SearchButton = __webpack_require__(3)
+  var buttons = new SearchButton(types);
+
+  buttons.renderAllButtons();
 
 }
 
@@ -82,43 +89,12 @@ var initialize = function(){
 window.addEventListener('load', initialize);
 
 
-/***/ }),
-/* 1 */,
-/* 2 */,
-/* 3 */
-/***/ (function(module, exports) {
-
-var FestivalsList = function ( url ) {
-  this.url = url;
-  this.festivals = [];
-}
-
-FestivalsList.prototype = {
-
-  getData: function ( callback) {
-    var request = new XMLHttpRequest();
-    request.open('GET', this.url);
-    request.send();
-    request.onreadystatechange = function () {
-      if(request.readyState < 4){
-      } else if( request.readyState === 4 && request.status === 200 ) {
-        var jsonString = request.responseText;
-        var festivals = JSON.parse(jsonString);
-        this.festivals = festivals;
-        callback();
-      }
-    }.bind( this )
-  }
-}
-
-module.exports = FestivalsList;
-
 
 /***/ }),
-/* 4 */
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var FestivalsList = __webpack_require__(3);
+var FestivalsList = __webpack_require__(2);
 //source for the color settings in the map
 var styledMapType = new google.maps.StyledMapType(
   [
@@ -175,6 +151,71 @@ MapWrapper.prototype = {
 
 
 module.exports = MapWrapper;
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+var FestivalsList = function ( url ) {
+  this.url = url;
+  this.festivals = [];
+}
+
+FestivalsList.prototype = {
+
+  getData: function ( callback) {
+    var request = new XMLHttpRequest();
+    request.open('GET', this.url);
+    request.send();
+    request.onreadystatechange = function () {
+      if(request.readyState < 4){
+      } else if( request.readyState === 4 && request.status === 200 ) {
+        var jsonString = request.responseText;
+        var festivals = JSON.parse(jsonString);
+        this.festivals = festivals;
+        callback();
+      }
+    }.bind( this )
+  }
+}
+
+module.exports = FestivalsList;
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+var SearchButton = function(typesFromApp){
+  this.types = typesFromApp;
+}
+
+SearchButton.prototype = {
+
+  renderButton: function(type) {
+    var appendDiv = document.createElement('appendDiv');
+    appendDiv.classList.add('search-div');
+    
+    var button = document.createElement('button');
+    button.innerText = type + " Festivals";
+
+    appendDiv.appendChild(button);
+
+    var searchDiv = document.getElementById('search-bar');
+    searchDiv.appendChild(appendDiv);
+  },
+
+  renderAllButtons: function(){
+    console.log(this.types);
+    this.types.forEach(function(type) {
+      console.log(type);
+      this.renderButton(type);
+    }.bind(this))
+  }
+}
+
+module.exports = SearchButton;
 
 
 /***/ })
