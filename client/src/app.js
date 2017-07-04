@@ -12,7 +12,7 @@ var initialize = function(){
   var fav = "Favourites";
 
 
-  results.renderSliderFestivals('http://localhost:3000/api/festivals/country/Scotland');
+  results.renderSliderFestivals( "http://localhost:3000/api/festivals/ratings/6" );
 
   mainMap.addAllMarkers();
 

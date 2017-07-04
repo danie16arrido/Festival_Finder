@@ -1,5 +1,5 @@
 var FestivalsList = function ( url ) {
-  this.url = url;
+  this.url = url ;
   this.festivals = [];
 }
 
