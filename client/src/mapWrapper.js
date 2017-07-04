@@ -55,13 +55,13 @@ MapWrapper.prototype = {
 
   addInfoWindow: function(festival) {
     var marker = this.addMarker(festival);
+    var path = "../build/" + festival.image;
     marker.addListener('click', function() {
       var infoWindow = new google.maps.InfoWindow({
-        content: festival.title + ", " + festival.country,
-
+        content:  '<div class="info-window"><img class="info-window-image" src="' + festival.image + '"/><p id="info-window-title">' + festival.title + '<br/> ' + festival.country + '</p></div>'
       });
       infoWindow.open(this.map, marker); 
-      setTimeout(function(){ infoWindow.close()}, 5000);
+      setTimeout(function(){ infoWindow.close()}, 3000);
     });
   }
 }
