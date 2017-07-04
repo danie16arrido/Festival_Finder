@@ -103,6 +103,7 @@ div.overlay {
   transition: .5s ease;
   background-color: #46bcec;
   border-radius: 5%;
+  overflow-y: scroll;
 }
 
 div.overlay-body {
