@@ -1,6 +1,10 @@
 var MongoClient = require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectID;
 
+var FestivalsQuery = require('./festival_query.js');
+var queryFestivals = new FestivalsQuery();
+
+
 var UserQuery = function() {
   this.url = "mongodb://localhost:27017/festival_finder";
   this.collection = "users";
@@ -24,7 +28,29 @@ UserQuery.prototype = {
         var collection = db.collection( this.collection );
         collection.findOne({ "_id": ObjectId( userIDtoFind )}, function( err, docs) {
           if ( docs ) {
-            onQueryFinished( docs.myFestivals );
+            var storage = [];
+            for( festival of docs.myFestivals){
+              queryFestivals.findByID( festival.id, function( festivalObj ){
+                storage.push( festivalObj );
+                console.log( "festobj",storage)
+              })
+            }
+            onQueryFinished( storage  );
+            // [
+            // 	{
+            // 		"id": "595bb6d08d674fbaeb556a21"
+            // 	},
+            // 	{
+            // 		"id": "595bb6d08d674fbaeb556a23"
+            // 	}
+            // ]
+
+            // [
+            // 	"595bb6d08d674fbaeb556a21",
+            // 	"595bb6d08d674fbaeb556a23"
+            // ]
+
+            // db.festivals.find( { "_id": { $all: [ ObjectId("595bb6d08d674fbaeb556a21") ] } } )
           }
         })
       }
@@ -38,7 +64,7 @@ UserQuery.prototype = {
         collection.update( {"_id": ObjectId(userId) }, {$push: { myFestivals: festivalToAdd } } );
         collection.find({"_id": ObjectId(userId) }).toArray(function( err,docs ) {
           if ( docs ) {
-            onQueryFinished( docs );
+            onQueryFinished( docs.myFestivals);
           }
         })
       }

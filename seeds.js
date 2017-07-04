@@ -402,8 +402,8 @@ db.festivals.insert([
 ]);
 
 db.users.insert([
-  { name: "Daniel", last_name: "Garrido", myFestivals: [{id:3},{id:4}]},
-  { name: "Juan", last_name: "Cortez", myFestivals: [{id:1}] }
+  { name: "Daniel", last_name: "Garrido", myFestivals: []},
+  { name: "Juan", last_name: "Cortez", myFestivals: [] }
 ]);
 
 db.festivals.createIndex( { type: 1 } );

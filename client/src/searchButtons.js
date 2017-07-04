@@ -35,6 +35,14 @@ SearchButton.prototype = {
 
   },
 
+  handleButtonFavouritesClick: function( event ) {
+    var ResultsFestivals = require('./resultsFestivals.js');
+    var results = new ResultsFestivals();
+
+
+
+  },
+
   createUrl: function ( buttonValue ) {
     var apiCall = "http://localhost:3000/api/festivals/type/";
     var type = buttonValue.toString();
@@ -49,8 +57,9 @@ SearchButton.prototype = {
 
     var button = document.createElement('button');
     button.innerText = " Favourites";
+    button.value = "http://localhost:3000/api/users/festivals/595ba18a4b9c1c193f6789ff";
 
-    button.addEventListener('click', this.handleButtonClick);
+    button.addEventListener('click', this.handleButtonFavouritesClick);
 
     appendDiv.appendChild(button);
 

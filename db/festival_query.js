@@ -37,7 +37,6 @@ FestivalQuery.prototype = {
     MongoClient.connect( this.url,function( err,db ) {
       if ( db ) {
         var collection = db.collection( this.collection );
-        console.log("festivaltofind", festivalIdToFind );
         collection.findOne({ "_id": ObjectId( festivalIdToFind )}, function( err, docs) {
           if ( docs ) {
             onQueryFinished( docs );
@@ -46,6 +45,17 @@ FestivalQuery.prototype = {
       }
     }.bind( this ))
   },
+
+  findManyById: function ( arrayOfIds, onQueryFinished) {
+    MongoClient.connect( this.url,function( err,db ) {
+      if ( db ) {
+    
+      }
+    }.bind( this ))
+  },
+
+    // db.festivals.find( { "_id": { $in: [ObjectId("595bb6d08d674fbaeb556a21"), ObjectId("595bb6d08d674fbaeb556a23")] } } );
+
 
   findByCountry: function(festivalCountryToFind, onQueryFinished) {
     MongoClient.connect(this.url, function(err, db) {
