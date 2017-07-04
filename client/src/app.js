@@ -5,9 +5,13 @@ var initialize = function(){
   var MapWrapper = require('./mapWrapper');
   var mainMap = new MapWrapper(mapDiv, center, 2);
 
+  var ResultsFestivals = require("./resultsFestivals")
+  var results = new ResultsFestivals();
+
   var types = ["Film", "Music", "Carnival", "Religious/Traditional", "New Year", "Food and Drink", "Featured"];
 
   mainMap.addAllMarkers();
+  results.render();
 
   var SearchButton = require('./searchButtons.js')
   var buttons = new SearchButton(types);
