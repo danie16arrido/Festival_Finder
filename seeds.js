@@ -11,7 +11,8 @@ db.festivals.insert([
   "end": "2018-01-27",
   "country": "Japan",
   "position": {"lat": 34.685087, "lng": 135.805},
-  "rating": 1
+  "rating": 1,
+  "image": "images/WAKAKUSA_YAMAYAKI.jpg"
 },
 
 {
@@ -22,7 +23,8 @@ db.festivals.insert([
   "end": "2018-01-28",
   "country": "USA",
   "position": {"lat": 40.646062, "lng": -111.497973},
-  "rating": 2
+  "rating": 2,
+  "image": "images/SUNDANCE_FILM_FESTIVAL.jpg"
 
 },
 
@@ -34,7 +36,8 @@ db.festivals.insert([
   "end": "2018-02-13",
   "country": "Italy",
   "position": {"lat": 45.440847, "lng": 12.315515},
-  "rating": 3
+  "rating": 3,
+  "image": "images/CARNIVALE_DI_VENEZIA.jpg"
 },
 
 {
@@ -45,7 +48,8 @@ db.festivals.insert([
   "end": "2018-02-17",
   "country": "USA",
   "position": {"lat": 29.951066, "lng": -90.071532},
-  "rating": 4
+  "rating": 4,
+  "image": "images/MARDI_GRAS.jpg"
 },
 
 {
@@ -56,7 +60,8 @@ db.festivals.insert([
   "end": "2018-03-02",
   "country": "China",
   "position": {"lat": 25.024831, "lng": 121.740865},
-  "rating": 5
+  "rating": 5,
+  "image": "images/SKY_LANTERN_FESTIVAL.jpg"
 },
 
 {
@@ -67,7 +72,8 @@ db.festivals.insert([
   "end": "2018-02-14",
   "country": "Brazil",
   "position": {"lat": -22.906847, "lng": -43.172896},
-  "rating": 6
+  "rating": 6,
+  "image": "images/RIO_CARNIVAL.jpg"
 },
 
 {
@@ -78,7 +84,8 @@ db.festivals.insert([
   "end": "2018-03-02",
   "country": "India",
   "position": {"lat": 28.626371, "lng": 77.373661},
-  "rating": 7
+  "rating": 7,
+  "image": "images/HOLI.jpg"
 },
 
 {
@@ -89,7 +96,8 @@ db.festivals.insert([
   "end": "2018-03-17",
   "country": "USA",
   "position": {"lat": 40.712784, "lng": -74.005941},
-  "rating": 8
+  "rating": 8,
+  "image": "images/ST_PATRICKS_DAY.jpg"
 },
 
 {
@@ -100,7 +108,8 @@ db.festivals.insert([
   "end": "2018-03-18",
   "country": "USA",
   "position": {"lat": 30.267153, "lng": -97.743061},
-  "rating": 9
+  "rating": 9,
+  "image": "images/SXSW.jpg"
 },
 
 {
@@ -111,7 +120,8 @@ db.festivals.insert([
   "end": "2018-04-27",
   "country": "Netherlands",
   "position": {"lat": 52.370216, "lng": 4.895168},
-  "rating": 10
+  "rating": 10,
+  "image": "images/KINGS_DAY.jpg"
 },
 
 {
@@ -122,7 +132,8 @@ db.festivals.insert([
   "end": "2018-04-08",
   "country": "Austria",
   "position": {"lat": 47.16919, "lng": 11.865146},
-  "rating": 11
+  "rating": 11,
+  "image": "images/SNOWBOMBING.jpg"
 },
 
 {
@@ -133,7 +144,8 @@ db.festivals.insert([
   "end": "2018-04-15",
   "country": "Thailand",
   "position": {"lat": 13.756331, "lng": 100.501765},
-  "rating": 12
+  "rating": 12,
+  "image": "images/SONGKRAN.jpg"
 },
 
 {
@@ -144,7 +156,8 @@ db.festivals.insert([
   "end": "2018-06-23",
   "country": "Russia",
   "position": {"lat": 59.93428, "lng": 30.335099},
-  "rating": 13
+  "rating": 13,
+  "image": "images/STARS_OF_THE_WHITE_NIGHTS.jpg"
 },
 
 {
@@ -155,7 +168,8 @@ db.festivals.insert([
   "end": "2018-06-20",
   "country": "France",
   "position": {"lat": 43.552847, "lng": 7.017369},
-  "rating": 14
+  "rating": 14,
+  "image": "images/CANNES_FILM_FESTIVAL.jpg"
 },
 
 {
@@ -166,7 +180,8 @@ db.festivals.insert([
   "end": "2019-06-25",
   "country": "UK",
   "position": {"lat": 51.165725, "lng": -2.589688},
-  "rating": 15
+  "rating": 15,
+  "image": "images/GLASTONBURY.jpg"
 },
 
 {
@@ -177,7 +192,8 @@ db.festivals.insert([
   "end": "2018-06-30",
   "country": "Spain",
   "position": {"lat": 42.576872, "lng": -2.85023},
-  "rating": 16
+  "rating": 16,
+  "image": "images/SAN_VINO_WINE_FIGHT.jpg"
 },
 
 {
@@ -188,7 +204,8 @@ db.festivals.insert([
   "end": "2018-06-10",
   "country": "UK",
   "position": {"lat": 52.830547, "lng": -1.37884},
-  "rating": 17
+  "rating": 17,
+  "image": "images/DOWNLOAD.jpg"
 },
 
 {
@@ -199,7 +216,8 @@ db.festivals.insert([
   "end": "2017-07-30",
   "country": "Belgium",
   "position": {"lat": 51.08608, "lng": 4.36633},
-  "rating": 18
+  "rating": 18,
+  "image": "images/TOMORROWLAND.jpg"
 },
 
 {
@@ -210,7 +228,8 @@ db.festivals.insert([
   "end": "2017-07-23",
   "country": "USA",
   "position": {"lat": 32.715738, "lng": -117.161084},
-  "rating": 19
+  "rating": 19,
+  "image": "images/COMIC_CON_INTERNATIONAL.jpg"
 },
 
 {
@@ -221,7 +240,8 @@ db.festivals.insert([
   "end": "2017-07-30",
   "country": "Canada",
   "position": {"lat": 45.501689, "lng": -73.567256},
-  "rating": 20
+  "rating": 20,
+  "image": "images/JUST_FOR_LAUGHS.jpg"
 },
 
 {
@@ -232,7 +252,8 @@ db.festivals.insert([
   "end": "2017-08-28",
   "country": "Scotland",
   "position": {"lat": 55.953252, "lng": -3.188267},
-  "rating": 21
+  "rating": 21,
+  "image": "images/EDINBURGH_FRINGE_FESTIVAL.jpg"
 },
 
 {
@@ -243,7 +264,8 @@ db.festivals.insert([
   "end": "2017-08-30",
   "country": "Spain",
   "position": {"lat": 39.420344, "lng": -0.790133},
-  "rating": 22
+  "rating": 22,
+  "image": "images/LA_TOMATINA.jpg"
 },
 
 {
@@ -254,7 +276,8 @@ db.festivals.insert([
   "end": "2017-08-30",
   "country": "UK",
   "position": {"lat": 51.511029, "lng": -0.205389},
-  "rating": 23
+  "rating": 23,
+  "image": "images/NOTTING_HILL_CARNIVAL.jpg"
 },
 
 {
@@ -265,7 +288,8 @@ db.festivals.insert([
   "end": "2017-10-03",
   "country": "Germany",
   "position": {"lat": 48.135125, "lng": 11.581981},
-  "rating": 24
+  "rating": 24,
+  "image": "images/OKTOBERFEST.jpg"
 },
 
 {
@@ -276,7 +300,8 @@ db.festivals.insert([
   "end": "2017-09-04",
   "country": "Saudi Arabia",
   "position": {"lat": 21.389082, "lng": 39.857912},
-  "rating": 25
+  "rating": 25,
+  "image": "images/HAJJ.jpg"
 },
 
 {
@@ -287,7 +312,8 @@ db.festivals.insert([
   "end": "2017-10-08",
   "country": "USA",
   "position": {"lat": 30.267153, "lng": -97.743061},
-  "rating": 26
+  "rating": 26,
+  "image": "images/AUSTIN_CITY_LIMITS.jpg"
 },
 
 {
@@ -298,7 +324,8 @@ db.festivals.insert([
   "end": "2017-11-13",
   "country": "USA",
   "position": {"lat": 28.538336, "lng": -81.379236},
-  "rating": 27
+  "rating": 27,
+  "image": "images/EPCOT_FOOD_WINE_FESTIVAL.jpg"
 },
 
 {
@@ -309,7 +336,8 @@ db.festivals.insert([
   "end": "2017-10-23",
   "country": "India",
   "position": {"lat": 19.075984, "lng": 72.877656},
-  "rating": 28
+  "rating": 28,
+  "image": "images/DIWALI.jpg"
 },
 
 {
@@ -320,7 +348,8 @@ db.festivals.insert([
   "end": "2017-11-02",
   "country": "Mexico",
   "position": {"lat": 19.432608, "lng": -99.133208},
-  "rating": 29
+  "rating": 29,
+  "image": "images/DIA_DE_LOS_MUERTOS.jpg"
 },
 
 {
@@ -331,7 +360,8 @@ db.festivals.insert([
   "end": "2017-11-05",
   "country": "Thailand",
   "position": {"lat": 18.706064, "lng": 98.981716},
-  "rating": 30
+  "rating": 30,
+  "image": "images/LOY_KRATHONG_YI_PENG.jpg"
 },
 
 {
@@ -342,7 +372,8 @@ db.festivals.insert([
   "end": "2017-12-17",
   "country": "Turkey",
   "position": {"lat": 37.874643, "lng": 32.493155},
-  "rating": 31
+  "rating": 31,
+  "image": "images/MEVLANA_WHIRLING_DERVISHES.jpg"
 },
 
 {
@@ -353,7 +384,8 @@ db.festivals.insert([
   "end": "2017-12-05",
   "country": "Austria",
   "position": {"lat": 39.040091, "lng": -76.979032},
-  "rating": 32
+  "rating": 32,
+  "image": "images/KRAMPUSNACHT.jpg"
 },
 
 {
@@ -364,6 +396,7 @@ db.festivals.insert([
   "end": "2018-01-01",
   "country": "Scotland",
   "position": {"lat": 55.953252, "lng": -3.188267},
-  "rating": 33
+  "rating": 33,
+  "image": "images/HOGMANAY.jpg"
 }
 ]);

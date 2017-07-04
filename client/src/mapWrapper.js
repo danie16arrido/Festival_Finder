@@ -53,5 +53,4 @@ MapWrapper.prototype = {
 }
 
 
-
 module.exports = MapWrapper;
