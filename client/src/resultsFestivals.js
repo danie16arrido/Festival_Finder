@@ -2,7 +2,6 @@ var ResultsFestivals = function() {
   var FestivalsList = require("./festivalsList");
   var url = 'http://localhost:3000/api/festivals'
   this.list = new FestivalsList(url);
-  // this.selectedIndex = 0;
 }
 
 ResultsFestivals.prototype = {
@@ -60,7 +59,7 @@ ResultsFestivals.prototype = {
 
         favButton.classList.add('fav-button');
 
-        
+
         festival.appendChild(image);
         festival.appendChild(h3);
         festival.appendChild(country);
