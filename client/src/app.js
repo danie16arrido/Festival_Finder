@@ -9,14 +9,16 @@ var initialize = function(){
   var results = new ResultsFestivals();
 
   var types = ["Film", "Music", "Carnival", "Religious/Traditional", "New Year", "Food and Drink", "Featured"];
+  var fav = "Favourites";
 
   mainMap.addAllMarkers();
   results.render();
 
   var SearchButton = require('./searchButtons.js')
-  var buttons = new SearchButton(types);
+  var buttons = new SearchButton(types, fav);
 
   buttons.renderAllButtons();
+  buttons.renderFavButton();
 
 }
 

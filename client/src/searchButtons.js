@@ -1,5 +1,6 @@
-var SearchButton = function(typesFromApp){
+var SearchButton = function(typesFromApp, fav){
   this.types = typesFromApp;
+  this.favourites = fav;
 }
 
 SearchButton.prototype = {
@@ -27,6 +28,21 @@ SearchButton.prototype = {
 
   handleButtonClick: function() {
    console.log("button clicked");
+  },
+
+  renderFavButton: function(fav) {
+    var appendDiv = document.createElement('appendDiv');
+    appendDiv.classList.add('head-div');
+    
+    var button = document.createElement('button');
+    button.innerText = " Favourites";
+
+    button.addEventListener('click', this.handleButtonClick);
+
+    appendDiv.appendChild(button);
+
+    var header = document.getElementById('header');
+    header.appendChild(appendDiv);
   }
 }
 
