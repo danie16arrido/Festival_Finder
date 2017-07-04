@@ -31,6 +31,20 @@ UserQuery.prototype = {
     }.bind( this ))
   },
 
+  add: function( userId, festivalToAdd, onQueryFinished ){
+    MongoClient.connect(this.url,function( err, db ) {
+      if ( db ) {
+        var collection = db.collection( this.collection );
+        collection.update( {"_id": ObjectId(userId) }, {$push: { myFestivals: festivalToAdd } } );
+        collection.find({"_id": ObjectId(userId) }).toArray(function( err,docs ) {
+          if ( docs ) {
+            onQueryFinished( docs );
+          }
+        })
+      }
+    }.bind( this ))
+  }
+
 }
 
 module.exports = UserQuery;

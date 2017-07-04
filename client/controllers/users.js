@@ -19,5 +19,13 @@ usersRouter.get('/:userid', function( req, res ) {
   })
 });
 
+//add festival to user's favourites CREATE
+usersRouter.post("/:userId", function(req,res) {
+  var newFestival = req.body;
+  queryUsers.add( req.params.userId , newFestival, function( festival ) {
+    res.json( festival );
+  })
+});
+
 
 module.exports = usersRouter;
