@@ -9,7 +9,6 @@ body {
 
 #text-header {
   font-size: 2em;
-
   border: 1px dashed black;
 }
 
@@ -48,30 +47,72 @@ body {
   flex: 1;
   width: 100%;
   height: 400px;
-  background: #d3d3d3;
 }
 
 #results-body {
   display: flex;
   flex-wrap:wrap;
   width: 100%;
-  height: 370px;
+  height: 450px;
+  padding-top: 30px;
+
 }
 
 #festival-div {
   width: 100%;
   overflow-x: scroll;
   display: flex;
+  padding: 10px 50px 10px 0px;
+  position: relative;
+}
+
+div.festival:hover .overlay {
+  opacity: 1;
 }
 
 img.festival-image {
-  width: 350px;
-  height: 200px;
-  border: 1px solid white
+  width: 300px;
+  height: 150px;
+/*  border: 50px solid white;*/
 }
 
 div.festival {
+  color: #444444;
   display: flex;
   flex-flow: column;
-  padding: 10px 30px 10px 30px;
+  border: 1px solid grey;
+  background: #d3d3d3;
+  display: block;
+  position: relative;
+  text-align: center;
+  border: 5px solid white;
+  border-radius: 5%;
+  padding: 15px 10px 0px 10px;
 }
+
+
+div.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #46bcec;
+  border-radius: 5%;
+}
+
+div.overlayBody {
+  text-align: left;
+  color: white;
+  font-size: 13px;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+

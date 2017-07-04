@@ -60,38 +60,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var initialize = function(){
-  var mapDiv = document.getElementById('main-map');
-  var center = { lat: 0, lng: 0 };
-
-  var MapWrapper = __webpack_require__(4);
-  var mainMap = new MapWrapper(mapDiv, center, 2);
-
-  var ResultsFestivals = __webpack_require__(5)
-  var results = new ResultsFestivals();
-
-
-
-  mainMap.addAllMarkers();
-  results.render();
-
-}
-
-
-window.addEventListener('load', initialize);
-
-
-/***/ }),
-/* 1 */,
-/* 2 */,
-/* 3 */
 /***/ (function(module, exports) {
 
 var FestivalsList = function ( url ) {
@@ -121,10 +94,35 @@ module.exports = FestivalsList;
 
 
 /***/ }),
-/* 4 */
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var FestivalsList = __webpack_require__(3);
+var initialize = function(){
+  var mapDiv = document.getElementById('main-map');
+  var center = { lat: 0, lng: 0 };
+
+  var MapWrapper = __webpack_require__(2);
+  var mainMap = new MapWrapper(mapDiv, center, 2);
+
+  var ResultsFestivals = __webpack_require__(3)
+  var results = new ResultsFestivals();
+
+
+
+  mainMap.addAllMarkers();
+  results.render();
+
+}
+
+
+window.addEventListener('load', initialize);
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var FestivalsList = __webpack_require__(0);
 //source for the color settings in the map
 var styledMapType = new google.maps.StyledMapType(
   [
@@ -183,11 +181,11 @@ module.exports = MapWrapper;
 
 
 /***/ }),
-/* 5 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var ResultsFestivals = function() {
-  var FestivalsList = __webpack_require__(3);
+  var FestivalsList = __webpack_require__(0);
   var url = 'http://localhost:3000/api/festivals'
   this.list = new FestivalsList(url);
   // this.selectedIndex = 0;
@@ -208,6 +206,15 @@ ResultsFestivals.prototype = {
         var country = document.createElement('p');
         var date = document.createElement('p');
 
+        var overlay = document.createElement('div');
+        var overlayBody = document.createElement('div');
+
+        var h2 = document.createElement('h3');
+        var description = document.createElement('p');
+        var countryOverlay = document.createElement('p');
+        var dateOverlay = document.createElement('p');
+
+
         image.classList.add('festival-image');
         image.src = ele.image;
 
@@ -220,6 +227,19 @@ ResultsFestivals.prototype = {
         date.classList.add('festival-date');
         date.innerText = ele.start;
 
+        overlay.classList.add('overlay');
+        overlayBody.classList.add('overlayBody');
+        
+        h2.innerText = ele.title;
+        description.innerText = ele.description;
+        countryOverlay.innerText = ele.country;
+        dateOverlay.innerText = ele.start + "-" + ele.end;
+
+        overlayBody.appendChild(h2);
+        overlayBody.appendChild(description);
+        overlayBody.appendChild(countryOverlay);
+        overlayBody.appendChild(dateOverlay);
+
 
         festival.classList.add('festival');
         
@@ -228,12 +248,14 @@ ResultsFestivals.prototype = {
         festival.appendChild(country);
         festival.appendChild(date);
 
+        overlay.appendChild(overlayBody);
+
         
         festivalList.appendChild(festival);
+        festival.appendChild(overlay);
+
       }.bind(this));
     }.bind(this));
-
-    
 
   }
 

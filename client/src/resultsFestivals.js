@@ -20,6 +20,15 @@ ResultsFestivals.prototype = {
         var country = document.createElement('p');
         var date = document.createElement('p');
 
+        var overlay = document.createElement('div');
+        var overlayBody = document.createElement('div');
+
+        var h2 = document.createElement('h3');
+        var description = document.createElement('p');
+        var countryOverlay = document.createElement('p');
+        var dateOverlay = document.createElement('p');
+
+
         image.classList.add('festival-image');
         image.src = ele.image;
 
@@ -32,6 +41,19 @@ ResultsFestivals.prototype = {
         date.classList.add('festival-date');
         date.innerText = ele.start;
 
+        overlay.classList.add('overlay');
+        overlayBody.classList.add('overlayBody');
+        
+        h2.innerText = ele.title;
+        description.innerText = ele.description;
+        countryOverlay.innerText = ele.country;
+        dateOverlay.innerText = ele.start + "-" + ele.end;
+
+        overlayBody.appendChild(h2);
+        overlayBody.appendChild(description);
+        overlayBody.appendChild(countryOverlay);
+        overlayBody.appendChild(dateOverlay);
+
 
         festival.classList.add('festival');
         
@@ -40,12 +62,14 @@ ResultsFestivals.prototype = {
         festival.appendChild(country);
         festival.appendChild(date);
 
+        overlay.appendChild(overlayBody);
+
         
         festivalList.appendChild(festival);
+        festival.appendChild(overlay);
+
       }.bind(this));
     }.bind(this));
-
-    
 
   }
 
