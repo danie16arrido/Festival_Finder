@@ -8,7 +8,7 @@ var initialize = function(){
   var ResultsFestivals = require("./resultsFestivals")
   var results = new ResultsFestivals();
 
-  var types = ["Film", "Music", "Carnival", "Religious/Traditional", "New Year", "Food and Drink", "Featured"];
+  var types = ["Film", "Music", "Carnival", "Religious/Traditional", "New Year", "Food and Drink", "Scenic Arts", "Featured"];
   var fav = "Favourites";
 
 
@@ -19,13 +19,10 @@ var initialize = function(){
   var SearchButton = require('./searchButtons.js')
   var buttons = new SearchButton(types, fav);
 
-
-
   buttons.renderAllButtons();
   buttons.renderFavButton();
 
 }
-
 
 
 window.addEventListener('load', initialize);
