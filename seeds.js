@@ -6,7 +6,7 @@ db.festivals.insert([
 {
   "title": "WAKAKUSA YAMAYAKI",
   "description": "The name of the festival literally translates as ‘The Mountain Roast’ and is where on the 4th Saturday in January each year, the dead grass on the hillside of Mount Wakakusayama is set ablaze - but until after one epic fireworks display. There are two theories of the evolution of the festival. The first claims that the burning of the mountainside began during boundary conflicts between Nara’s great temples (Tōdai-ji and Kōfuku-ji), while another claims the fires were used to drive away wild boars. Once set ablaze the mountain can burn for up to an hour and because of the mountains elevation it can be seen from anywhere in the city.",
-  "type": "Religious/Traditional",
+  "type": "Religious_Traditional",
   "start": "2018-01-27",
   "end": "2018-01-27",
   "country": "Japan",
@@ -43,7 +43,7 @@ db.festivals.insert([
 {
   "title": "MARDI GRAS",
   "description": "Mardi Gras is synonymous with hedonism and debauchery, and with a motto of Laissez les bons temps rouler (Let the good times roll), it’s no surprise that this is probably the wildest party in the United States. It may be a surprise to some, however, that Mardi Gras is the official final celebration before the period of Lent, the Catholic period of introspection and sacrifice. But whatever your religion - everyone is welcome! So grab your purple, green and gold (the festivals official colors representing justice, faith and power) and take to the streets for one of the biggest parties of your life.",
-  "type": "Religious/Traditional",
+  "type": "Religious_Traditional",
   "start": "2018-02-13",
   "end": "2018-02-17",
   "country": "USA",
@@ -79,7 +79,7 @@ db.festivals.insert([
 {
   "title": "HOLI",
   "description": "The annual Holi Festival celebration in India is known for its vibrant display of color and beautiful meaning of unity. Each year the Indian people come together to throw colors and celebrate how the color unifies them and washes away their differences for the duration of the day. Every person in India celebrates the holiday and it is truly a spectacle to behold for a foreign visitor. The festival starts out quite mild in the morning and grows into a crazy and colorful, almost out of control, party by the afternoon. It is mostly celebrated on the streets with loud music before people retreat to private house parties to eat and continue the celebration.",
-  "type": "Religious/Traditional",
+  "type": "Religious_Traditional",
   "start": "2018-03-01",
   "end": "2018-03-02",
   "country": "India",
@@ -91,7 +91,7 @@ db.festivals.insert([
 {
   "title": "ST PATRICK’S DAY",
   "description": "St Patrick’s day has taken place in New York City on March 17th since 1762. On this day, the whole city turns green, lots of people paint a green shamrock on their faces and even the Empire State Building is lit up in green. The Irish pubs are packed with Irish immigrants and many other nationalities who celebrate this fun holiday. Many Irish bake the traditional soda bread on this day. It is a bread made of raisins, baking soda, baking powder, flour, sugar, salt and margarine. It is one of the most fun days of the year in NYC every year, when the whole city turns into a big green party and many people get drunk.",
-  "type": "Religious/Traditional",
+  "type": "Religious_Traditional",
   "start": "2018-03-17",
   "end": "2018-03-17",
   "country": "USA",
@@ -115,7 +115,7 @@ db.festivals.insert([
 {
   "title": "KINGS DAY",
   "description": "Every year on April 27 Amsterdam turns a very bright shade of orange for King’s Day, which is the King’s birthday (Willem-Alexander of the House of Orange). It’s a crazy fun celebration when the center of the city is basically car, tram, and bike-free simply because there are too many people on foot. It has a contagious festival-like atmosphere with street vendors, a market day when anyone can sell pretty much anything (except alcohol), and an insane boat parade party on the canals that will have you dancing unconsciously. It’s a festival that can put a smile on everyone’s face! Tips: Bring a jacket, wear orange, bring cash. Want to know more? Read How to Have the Best King’s Day Ever in Amsterdam.",
-  "type": "Religious/Traditional",
+  "type": "Religious_Traditional",
   "start": "2018-04-27",
   "end": "2018-04-27",
   "country": "Netherlands",
@@ -259,7 +259,7 @@ db.festivals.insert([
 {
   "title": "LA TOMATINA",
   "description": "La Tomatina Festival takes place in a Spanish town in Valencia (Buñol). I went there in 2008 and it was a crazy fun festival. At around 10 am, the tomato war is starting. A few small trucks go inside the town, bringing with them kilos and kilos of tomatoes. They let the tomatoes drop to the ground, and that signals the beginning of the party. If you´ve ever wondered if this is painful, then you shouldn´t worry. Most of time, the tomatoes you will get are the mashed or crushed tomatoes that you can use to throw to your friends and even to strangers also partaking in the party. You´ll definitely get dirty. There will always be nice locals who will take out their hose and will splash the people with water so they can get cleaned. Bringing goggles are highly recommended. The event is definitely so much fun!",
-  "type": "Religious/Traditional",
+  "type": "Religious_Traditional",
   "start": "2017-08-30",
   "end": "2017-08-30",
   "country": "Spain",
@@ -295,7 +295,7 @@ db.festivals.insert([
 {
   "title": "HAJJ",
   "description": "Hajj refers to a Muslim’s pilgrimage to Mecca and is one of the five pillars of Islam. At least once in his or her lifetime, each Muslim is expected to undertake this pilgrimage the sacred city of Islam. This holy journey is called the hajj in Arabic. While a visit to Mecca is beneficial any time of the year, it must take place during the month of Dhu al-Hijja (the last month of the Islamic year) to fulfill the requirements of the hajj.As with the sawm (fasting), exceptions are made for those who are physically or financially unable to fulfill this obligation, and one is actually commanded not to make the hajj if to do so would cause hardship for his or her family. However, those unable to go themselves may fulfill their obligation by sending someone in their stead.",
-  "type": "Religious/Traditional",
+  "type": "Religious_Traditional",
   "start": "2017-08-30",
   "end": "2017-09-04",
   "country": "Saudi Arabia",
@@ -331,7 +331,7 @@ db.festivals.insert([
 {
   "title": "DIWALI",
   "description": "Diwali is supposed to last for about five days and consists in exchanging gifts, burning butter and oil lanterns, and in fireworks. In fact, it actually lasts more than the official five days, and it is incredibly noisy, with fireworks exploding literally anywhere - so much so that the already dramatic pollution levels of India increase further. Most Indians take their holidays during Diwali, or right after. Cities can get incredibly crowded with internal tourists - but the atmosphere is incredible!",
-  "type": "Religious/Traditional",
+  "type": "Religious_Traditional",
   "start": "2017-10-19",
   "end": "2017-10-23",
   "country": "India",
@@ -343,7 +343,7 @@ db.festivals.insert([
 {
   "title": "DIA DE LOS MUERTOS",
   "description": "Always a festival in Mexico, the opening scene’s of the James Bond movie, Spectre depicted a lavish parade that has ‘encouraged’ the Mexican Government to turn it into a reality. And the first Day of the Dead Festival was held in Mexico City in 2016. The interest in the parade is so vast that Mexico anticipate it becoming as big as Rio’s Carnival in the years to come.",
-  "type": "Religious/Traditional",
+  "type": "Religious_Traditional",
   "start": "2017-10-31",
   "end": "2017-11-02",
   "country": "Mexico",
@@ -355,7 +355,7 @@ db.festivals.insert([
 {
   "title": "LOY KRATHONG & YI PENG",
   "description": "Loi Krathong is one of the most picturesque and most romantic festivals of Thailand, falling on the night of full moon of the 12th lunar month. The moon appears exceptionally bright, beautiful and full. Young couples draped in traditional finery, gather around lakes, rivers and canals to pay respects to the goddess of water by launching of the Krathong into the water. Krathong is a lotus shaped container made of banana leaves, containing a candle, incense sticks, flower and coins.People also make their way to these water bodies where they can float Krathongs and make their wishes. It is said that people congregate for floating away their sins and miseries and hope for a better future for their families. Click to Read More. At the same people light lanterns which rise into the night sky (Yi Peng) which makes for one of the most amazing sights you will ever see.",
-  "type": "Religious/Traditional",
+  "type": "Religious_Traditional",
   "start": "2017-11-04",
   "end": "2017-11-05",
   "country": "Thailand",
@@ -367,7 +367,7 @@ db.festivals.insert([
 {
   "title": "MEVLANA WHIRLING DERVISHES",
   "description": "Men dressed in whites robes and tall hats spinning in circles doesn’t sound as exciting as running with the bulls or dancing at Rio’s Carnival, but the chance to watch the Whirling Dervishes will change you in a way you’d never expect. Based on the teachings and practices of the 13th-century poet Rumi, this 10-day festival will expose you to the power of devotion and show you that spinning can do more than just make you dizzy.",
-  "type": "Religious/Traditional",
+  "type": "Religious_Traditional",
   "start": "2017-12-07",
   "end": "2017-12-17",
   "country": "Turkey",
@@ -379,7 +379,7 @@ db.festivals.insert([
 {
   "title": "KRAMPUSNACHT",
   "description": "The mythical Krampus is horned half-goat, half-deamon who is meant to whip children into being nice at Christmas - and he’s more than a little terrifying to the uninitiated.Bearing horns, long dark hair (fur), and fangs, the anti-St. Nicholas comes with a chain and bells that he lashes about, along with a bundle of birch sticks meant to swat naughty children. He then hauls the bad kids down to the underworld. Or so the story goes. In the Austrian Alps, a parade of Krampus take over the streets, their chains rattling as they walk through the snow covered streets, carrying torches of fire and whipping unsuspecting passersby.",
-  "type": "Religious/Traditional",
+  "type": "Religious_Traditional",
   "start": "2017-12-05",
   "end": "2017-12-05",
   "country": "Austria",

@@ -8,11 +8,11 @@ var initialize = function(){
   var ResultsFestivals = require("./resultsFestivals")
   var results = new ResultsFestivals();
 
-  var types = ["Film", "Music", "Carnival", "Religious/Traditional", "New Year", "Food and Drink", "Scenic Arts", "Featured"];
+  var types = ["Film", "Music", "Carnival", "Religious Traditional", "New Year", "Food and Drink", "Scenic Arts", "Featured"];
   var fav = "Favourites";
 
 
-  results.renderSliderFestivals('http://localhost:3000/api/festivals/country/Scotland');
+  results.renderSliderFestivals( "http://localhost:3000/api/festivals/ratings/6" );
 
   mainMap.addAllMarkers();
 
@@ -26,4 +26,3 @@ var initialize = function(){
 
 
 window.addEventListener('load', initialize);
-

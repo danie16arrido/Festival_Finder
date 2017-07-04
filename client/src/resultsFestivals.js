@@ -12,6 +12,7 @@ ResultsFestivals.prototype = {
 
     createDetails: function(){
         var festivalList = document.getElementById('festival-div');
+        festivalList.innerHTML = "";
 
         this.list.festivals.forEach(function( ele ){
             var festival = document.createElement('div');
@@ -37,7 +38,7 @@ ResultsFestivals.prototype = {
             h3.innerText = ele.title;
 
             country.classList.add('festival-country');
-            country.innerText = ele.country;  
+            country.innerText = ele.country;
 
             date.classList.add('festival-date');
             date.innerText = ele.start;
