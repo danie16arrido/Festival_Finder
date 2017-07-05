@@ -22,3 +22,8 @@ button.header-fav-button {
   float: right;
 }
 
+button.search-button:hover {
+  background-color:#D4BFD6;
+  transition-duration: 0.4s;
+}
+

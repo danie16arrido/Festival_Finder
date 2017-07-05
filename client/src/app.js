@@ -17,7 +17,7 @@ var initialize = function(){
   mainMap.addAllMarkers();
 
   var SearchButton = require('./searchButtons.js')
-  var buttons = new SearchButton(types, fav);
+  var buttons = new SearchButton(types, fav, mainMap);
 
   buttons.renderAllButtons();
   buttons.renderFavButton();
