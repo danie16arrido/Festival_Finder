@@ -67,12 +67,12 @@ ResultsFestivals.prototype = {
             favButton.innerText = "Add to favourites";
 
 
-
+            overlayBody.appendChild(favButton);
             overlayBody.appendChild(titleOverlay);
             overlayBody.appendChild(description);
             overlayBody.appendChild(countryOverlay);
             overlayBody.appendChild(dateOverlay);
-            overlayBody.appendChild(favButton);
+            
 
 
             festival.classList.add('festival');

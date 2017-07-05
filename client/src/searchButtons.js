@@ -50,6 +50,8 @@ SearchButton.prototype = {
     var button = document.createElement('button');
     button.innerText = " Favourites";
 
+    button.classList.add('header-fav-button');
+
     button.addEventListener('click', this.handleButtonClick);
 
     appendDiv.appendChild(button);
