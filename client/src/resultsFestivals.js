@@ -65,6 +65,7 @@ ResultsFestivals.prototype = {
 
             favButton.classList.add('fav-button');
             favButton.innerText = "Add to favourites";
+            favButton.addEventListener( 'click', this.handleButtonAddToFavourites );
 
 
 
@@ -89,7 +90,12 @@ ResultsFestivals.prototype = {
             festival.appendChild(overlay);
 
         }.bind( this ))
+    },
+
+    handleButtonAddToFavourites: function ( event ) {
+      console.log(event.target);
     }
+
 }
 
 
