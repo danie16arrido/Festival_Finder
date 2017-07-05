@@ -3,6 +3,7 @@ var user = require('./userId.js');
 
 var SearchButton = function(map){
   this.currentUserId = "http://localhost:3000/api/users/festivals/" + user.id;
+  this.typeUrl = "http://localhost:3000/api/festivals/type/";
   this.types = ["Film", "Music", "Carnival", "Religious Traditional", "New Year", "Food and Drink", "Scenic Arts"];
   this.favourites = "Favourites";
   this.map = map;
@@ -48,7 +49,7 @@ SearchButton.prototype = {
   },
 
   createUrl: function ( buttonValue ) {
-    var apiCall = "http://localhost:3000/api/festivals/type/";
+    var apiCall = this.typeUrl;
     var type = buttonValue.toString();
     type = type.split(' ').join('_');
     apiCall += type;

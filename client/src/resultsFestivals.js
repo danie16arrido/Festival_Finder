@@ -37,7 +37,6 @@ ResultsFestivals.prototype = {
             var dateOverlay = document.createElement('p');
             var favButton = document.createElement('button');
 
-
             image.classList.add('festival-image');
             image.src = ele.image;
 
