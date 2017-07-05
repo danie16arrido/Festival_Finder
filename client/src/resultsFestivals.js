@@ -122,14 +122,14 @@ ResultsFestivals.prototype = {
     handleButtonRemoveFromFavourites: function ( event ) {
       var festivalId = event.target.value;
       var request = new XMLHttpRequest();
-      var apicall = "http://localhost:3000/api/users/festivals/595bb6d08d674fbaeb556a42/";
+      var apicall = "http://localhost:3000/api/users/festivals/595cfc57589bcfea21f69b81";
       apicall += festivalId;
       console.log(apicall);
       request.open('DELETE', apicall);
       request.setRequestHeader("Content-Type", "application/json");
 
       request.onreadystatechange = function () {
-        this.renderSliderFestivals( "http://localhost:3000/api/users/festivals/595bb6d08d674fbaeb556a42");
+        this.renderSliderFestivals( "http://localhost:3000/api/users/festivals/595cfc57589bcfea21f69b81");
         //something to do when the information has saved
       }.bind( this )
       request.send();
