@@ -29,6 +29,7 @@ body {
   height: 300px;
   border: 2px solid #AAA4AB;
   margin-top: 5px;
+    box-shadow: -2px -2px 3px 0px rgba(50, 50, 50, 0.75);
 }
 
 #search-bar {

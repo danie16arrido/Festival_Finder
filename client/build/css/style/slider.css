@@ -4,6 +4,7 @@
   display: flex;
   padding: 10px 50px 10px 0px;
   position: relative;
+  justify-content: space-around
 }
 
 div.festival:hover .overlay {
@@ -14,20 +15,22 @@ img.festival-image {
   width: 300px;
   height: 150px;
   border-radius: 4%;
-  border: 15px solid white;
+  border: 1px solid white;
 }
 
 div.festival {
-  color: white;
+  color: black;
   flex-flow: column;
-  background-color: #D4BFD6;
+  /*background-color: #D4BFD6;*/
+  background-color: rgba(196, 204, 222, 0.4);;
   display: block;
   position: relative;
   text-align: center;
-  border-radius: 5%;
+  border-radius: 2%;
   padding: 15px 10px 0px 10px;
   margin: 7px;
-  box-shadow: 6px 6px 5px #888888;
+  box-shadow: 3px 3px 5px #888888;
+  /*box-shadow: 0px 0px 6px 3px rgba(50, 50, 50, 0.75);*/
 }
 
 div.overlay {
@@ -39,10 +42,11 @@ div.overlay {
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: .5s ease;
+  transition: 0.6s ease;
   background-color: #FFF9DE;
   border-radius: 3%;
   overflow-y: scroll;
+
 }
 
 div.overlay-body {
