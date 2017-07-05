@@ -1,3 +1,5 @@
+var ResultsFestivals = require('./resultsFestivals.js');
+
 var ResultsFestivals = function() {
   var FestivalsList = require("./festivalsList");
   this.list = new FestivalsList( null );
@@ -65,6 +67,7 @@ ResultsFestivals.prototype = {
 
             favButton.classList.add('fav-button');
             favButton.innerText = "Add to favourites";
+            favButton.value = ele._id;
             favButton.addEventListener( 'click', this.handleButtonAddToFavourites );
 
 
@@ -93,7 +96,7 @@ ResultsFestivals.prototype = {
     },
 
     handleButtonAddToFavourites: function ( event ) {
-      console.log(event.target);
+      console.log( event.target.value);
     }
 
 }

@@ -1,3 +1,5 @@
+var ResultsFestivals = require('./resultsFestivals.js');
+
 var SearchButton = function(typesFromApp, fav){
   this.types = typesFromApp;
   this.favourites = fav;
@@ -29,20 +31,14 @@ SearchButton.prototype = {
   },
 
   handleButtonClick: function( event ) {
-    var ResultsFestivals = require('./resultsFestivals.js');
     var results = new ResultsFestivals();
     var apiCall = this.createUrl( event.target.value );
     results.renderSliderFestivals( apiCall );
-
   },
 
   handleButtonFavouritesClick: function( event ) {
-    var ResultsFestivals = require('./resultsFestivals.js');
     var results = new ResultsFestivals();
     results.renderSliderFestivals( event.target.value );
-
-
-
   },
 
   createUrl: function ( buttonValue ) {
