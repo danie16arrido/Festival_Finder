@@ -1,0 +1,23 @@
+button {
+  font-size: 13px;
+  padding: 13px 18px;
+  margin: 5px auto;
+  color: white;
+  background-color: #ADB4C4;
+  border: 0 none;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 3px 3px 2px #888888;
+}
+
+button.fav-button {
+  background-color: #BD77AE;
+  padding: 10px 15px;
+  float: right;
+  margin-left: 10px;
+}
+
+button.header-fav-button {
+  background-color: #BD77AE;
+  float: right;
+}

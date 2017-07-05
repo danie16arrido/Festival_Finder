@@ -64,7 +64,7 @@ SearchButton.prototype = {
 
     appendDiv.appendChild(button);
 
-    var header = document.getElementById('header');
+    var header = document.getElementById('search-bar');
     header.appendChild(appendDiv);
   }
 }
