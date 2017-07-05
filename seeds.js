@@ -383,7 +383,7 @@ db.festivals.insert([
   "start": "2017-12-05",
   "end": "2017-12-05",
   "country": "Austria",
-  "position": {"lat": 39.040091, "lng": -76.979032},
+  "position": {"lat": 46.63646, "lng": 14.312225},
   "rating": 32,
   "image": "images/KRAMPUSNACHT.jpg"
 },
