@@ -3,7 +3,7 @@ var ResultsFestivals = require('./resultsFestivals.js');
 var SearchButton = function(typesFromApp, fav){
   this.types = typesFromApp;
   this.favourites = fav;
-  this.currentUserId = "http://localhost:3000/api/users/festivals/595bb6d08d674fbaeb556a42";
+  this.currentUserId = "http://localhost:3000/api/users/festivals/595cce2390c733820571471a";
 }
 
 SearchButton.prototype = {

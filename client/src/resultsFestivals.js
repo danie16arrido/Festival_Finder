@@ -101,7 +101,7 @@ ResultsFestivals.prototype = {
     handleButtonAddToFavourites: function ( event ) {
       console.log( event.target.value);
       var request = new XMLHttpRequest();
-      request.open('POST', "http://localhost:3000/api/users/festivals/595bb6d08d674fbaeb556a42");
+      request.open('POST', "http://localhost:3000/api/users/festivals/595cce2390c733820571471a");
       request.setRequestHeader("Content-Type", "application/json");
 
       request.onreadystatechange = function () {
