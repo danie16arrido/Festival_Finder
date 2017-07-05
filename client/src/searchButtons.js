@@ -3,7 +3,7 @@ var ResultsFestivals = require('./resultsFestivals.js');
 var SearchButton = function(typesFromApp, fav, map){
   this.types = typesFromApp;
   this.favourites = fav;
-  this.currentUserId = "http://localhost:3000/api/users/festivals/595d0657d5aeb7c5bd65ecbb";
+  this.currentUserId = "http://localhost:3000/api/users/festivals/595bb6d08d674fbaeb556a42";
   this.map = map;
 
 }
@@ -37,7 +37,6 @@ SearchButton.prototype = {
     var results = new ResultsFestivals();
     var apiCall = this.createUrl( event.target.value );
     //WE WANT TO RENDER MAP MARKERS
-    console.log("url", apiCall)
     this.map.clearMarkers();
     this.map.addMarkers( apiCall )
     results.renderSliderFestivals( apiCall );
