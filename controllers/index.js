@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 
-//hand api calls to festivals.js
+//hand api calls to routers
 router.use('/api/festivals', require('./festivals.js'));
 router.use('/api/users/festivals', require('./users.js'));
 
