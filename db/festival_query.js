@@ -37,10 +37,24 @@ FestivalQuery.prototype = {
     MongoClient.connect( this.url,function( err,db ) {
       if ( db ) {
         var collection = db.collection( this.collection );
-        console.log("festivaltofind", festivalIdToFind );
         collection.findOne({ "_id": ObjectId( festivalIdToFind )}, function( err, docs) {
           if ( docs ) {
             onQueryFinished( docs );
+          }
+        })
+      }
+    }.bind( this ))
+  },
+
+  findManyById: function ( arrayOfIds, onQueryFinished) {
+    console.log('array of ids', arrayOfIds)
+    MongoClient.connect( this.url,function( err,db ) {
+      if ( db ) {
+        var collection = db.collection( this.collection );
+        collection.find({_id: {$in: arrayOfIds}}).toArray(function( err,docs ) {
+          if ( docs ) {
+            console.log("festivals", docs)
+            onQueryFinished(docs)
           }
         })
       }
@@ -52,7 +66,6 @@ FestivalQuery.prototype = {
       if (db) {
         var collection = db.collection(this.collection);
         collection.find({ country: festivalCountryToFind } ).toArray(function( err,docs ) {
-        // collection.findOne({"country": festivalCountryToFind}, function(err,docs) {
           if (docs) {
             onQueryFinished(docs);
           }
@@ -121,7 +134,6 @@ FestivalQuery.prototype = {
      MongoClient.connect( this.url, function ( err, db ) {
        if( db ){
          var collection = db.collection( this.collection );
-
          collection.deleteOne( { "_id": ObjectId( festivalID )}, function( err, docs ) {
            if( docs ){
              onQueryFinished( docs );
