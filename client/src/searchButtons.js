@@ -1,11 +1,11 @@
 var ResultsFestivals = require('./resultsFestivals.js');
+var mykey = "595bb6d08d674fbaeb556a42";
 
 var SearchButton = function(map){
+  this.currentUserId = "http://localhost:3000/api/users/festivals/" + mykey;
   this.types = ["Film", "Music", "Carnival", "Religious Traditional", "New Year", "Food and Drink", "Scenic Arts"];
   this.favourites = "Favourites";
-  this.currentUserId = "http://localhost:3000/api/users/festivals/595bb6d08d674fbaeb556a42";
   this.map = map;
-
 }
 
 SearchButton.prototype = {

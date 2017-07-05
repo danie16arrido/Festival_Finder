@@ -1,10 +1,12 @@
 var ResultsFestivals = require('./resultsFestivals.js');
+var myKey = "595bb6d08d674fbaeb556a42";
 
 var ResultsFestivals = function( fav ) {
+  this.userPath = "http://localhost:3000/api/users/festivals/" + myKey + "/";
+  this.defaultSliderUrl = "http://localhost:3000/api/festivals/ratings/6";
   var FestivalsList = require("./festivalsList");
   this.list = new FestivalsList( null );
   this.isFav =  fav || false;
-  this.defaultSliderUrl = "http://localhost:3000/api/festivals/ratings/6";
 }
 
 ResultsFestivals.prototype = {
@@ -76,7 +78,7 @@ ResultsFestivals.prototype = {
               favButton.classList.add('fav-button');
               favButton.innerText = "Add to favourites";
               favButton.value = ele._id;
-              favButton.addEventListener( 'click', this.handleButtonAddToFavourites );
+              favButton.addEventListener( 'click', this.handleButtonAddToFavourites.bind( this ) );
             }
 
             overlayBody.appendChild(favButton);
@@ -103,7 +105,7 @@ ResultsFestivals.prototype = {
 
     handleButtonAddToFavourites: function ( event ) {
       var request = new XMLHttpRequest();
-      request.open('POST', "http://localhost:3000/api/users/festivals/595bb6d08d674fbaeb556a42");
+      request.open('POST', this.userPath );
       request.setRequestHeader("Content-Type", "application/json");
 
       var modal = document.getElementById('myModal');
@@ -122,13 +124,13 @@ ResultsFestivals.prototype = {
     handleButtonRemoveFromFavourites: function ( event ) {
       var festivalId = event.target.value;
       var request = new XMLHttpRequest();
-      var apicall = "http://localhost:3000/api/users/festivals/595bb6d08d674fbaeb556a42/";
+      var apicall = this.userPath;
       apicall += festivalId;
       request.open('DELETE', apicall);
       request.setRequestHeader("Content-Type", "application/json");
 
       request.onreadystatechange = function () {
-        this.renderSliderFestivals( "http://localhost:3000/api/users/festivals/595bb6d08d674fbaeb556a42");
+        this.renderSliderFestivals( this.userPath );
         //something to do when the information has saved
       }.bind( this )
       request.send();
