@@ -57,6 +57,11 @@ SearchButton.prototype = {
     button.innerText = " Favourites";
     button.value = this.currentUserId;
 
+
+    button.classList.add('header-fav-button');
+
+    button.addEventListener('click', this.handleButtonClick);
+
     button.addEventListener('click', this.handleButtonFavouritesClick);
 
     appendDiv.appendChild(button);
