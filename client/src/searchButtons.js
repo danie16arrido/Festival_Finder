@@ -1,8 +1,8 @@
 var ResultsFestivals = require('./resultsFestivals.js');
 
-var SearchButton = function(typesFromApp, fav, map){
-  this.types = typesFromApp;
-  this.favourites = fav;
+var SearchButton = function(map){
+  this.types = ["Film", "Music", "Carnival", "Religious Traditional", "New Year", "Food and Drink", "Scenic Arts"];
+  this.favourites = "Favourites";
   this.currentUserId = "http://localhost:3000/api/users/festivals/595bb6d08d674fbaeb556a42";
   this.map = map;
 

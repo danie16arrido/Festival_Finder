@@ -8,21 +8,16 @@ var initialize = function(){
   var ResultsFestivals = require("./resultsFestivals")
   var results = new ResultsFestivals();
 
-  var types = ["Film", "Music", "Carnival", "Religious Traditional", "New Year", "Food and Drink", "Scenic Arts"];
-  var fav = "Favourites";
-
-
-  results.renderSliderFestivals( "http://localhost:3000/api/festivals/ratings/6" );
+  results.renderSliderFestivals();
 
   mainMap.addAllMarkers();
 
   var SearchButton = require('./searchButtons.js')
-  var buttons = new SearchButton(types, fav, mainMap);
+  var buttons = new SearchButton(mainMap);
 
   buttons.renderAllButtons();
   buttons.renderFavButton();
 
 }
-
 
 window.addEventListener('load', initialize);

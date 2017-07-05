@@ -4,11 +4,12 @@ var ResultsFestivals = function( fav ) {
   var FestivalsList = require("./festivalsList");
   this.list = new FestivalsList( null );
   this.isFav =  fav || false;
+  this.defaultSliderUrl = "http://localhost:3000/api/festivals/ratings/6";
 }
 
 ResultsFestivals.prototype = {
 
-    renderSliderFestivals: function( urlRequest ){
+    renderSliderFestivals: function( urlRequest = this.defaultSliderUrl ){
         this.list.url = urlRequest;
         this.list.getData( this.createDetails.bind( this ));
     },
