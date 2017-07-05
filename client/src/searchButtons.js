@@ -3,7 +3,7 @@ var ResultsFestivals = require('./resultsFestivals.js');
 var SearchButton = function(typesFromApp, fav){
   this.types = typesFromApp;
   this.favourites = fav;
-  this.currentUserId = "http://localhost:3000/api/users/festivals/595bb6d08d674fbaeb556a42";
+  this.currentUserId = "http://localhost:3000/api/users/festivals/595cdf80ed62292e5e861a0d";
 }
 
 SearchButton.prototype = {
@@ -15,6 +15,7 @@ SearchButton.prototype = {
     var button = document.createElement('button');
     button.value = type;
     button.innerText = type + " Festivals";
+    button.classList.add('search-button');
 
     button.addEventListener('click', this.handleButtonClick.bind(this));
 
