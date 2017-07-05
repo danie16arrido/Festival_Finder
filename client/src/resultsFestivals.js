@@ -3,7 +3,6 @@ var ResultsFestivals = require('./resultsFestivals.js');
 var ResultsFestivals = function( fav ) {
   var FestivalsList = require("./festivalsList");
   this.list = new FestivalsList( null );
-  this.currentUserId = "http://localhost:3000/api/users/festivals/595bb6d08d674fbaeb556a42";
   this.isFav =  fav || false;
 }
 
@@ -67,17 +66,11 @@ ResultsFestivals.prototype = {
             dateOverlay.classList.add('overlay-date');
             dateOverlay.innerText = ele.start + "/" + ele.end;
 
-            if( this.isFav ){
-              favButton.classList.add('fav-button');
-              favButton.innerText = "Delete to favourites";
-              favButton.value = ele._id;
-              favButton.addEventListener( 'click', this.handleButtonDeleteFromFavourites );
-            } else {
-              favButton.classList.add('fav-button');
-              favButton.innerText = "Add to favourites";
-              favButton.value = ele._id;
-              favButton.addEventListener( 'click', this.handleButtonAddToFavourites );
-            }
+            favButton.classList.add('fav-button');
+            favButton.innerText = "Add to favourites";
+            favButton.value = ele._id;
+            favButton.addEventListener( 'click', this.handleButtonAddToFavourites );
+
 
 
 
@@ -86,7 +79,7 @@ ResultsFestivals.prototype = {
             overlayBody.appendChild(description);
             overlayBody.appendChild(countryOverlay);
             overlayBody.appendChild(dateOverlay);
-            
+
 
 
             festival.classList.add('festival');
@@ -108,7 +101,7 @@ ResultsFestivals.prototype = {
     handleButtonAddToFavourites: function ( event ) {
       console.log( event.target.value);
       var request = new XMLHttpRequest();
-      request.open('POST', this.currentUserId);
+      request.open('POST', "http://localhost:3000/api/users/festivals/595bb6d08d674fbaeb556a42");
       request.setRequestHeader("Content-Type", "application/json");
 
       request.onreadystatechange = function () {
