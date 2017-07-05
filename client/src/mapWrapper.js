@@ -16,6 +16,7 @@ var styledMapType = new google.maps.StyledMapType(
 var MapWrapper = function(container, coords, zoom){
   this.list = new FestivalsList( null );
   this.allFestivalsUrl = 'http://localhost:3000/api/festivals';
+  this.listOfMarkers = [];
   this.googleMap = new google.maps.Map(container, {
     center: coords,
     zoom: zoom,
@@ -37,6 +38,7 @@ MapWrapper.prototype = {
       map: this.googleMap,
       icon: "/images/push.png"
     });
+    this.listOfMarkers.push( marker );
     return marker;
   },
 
@@ -61,9 +63,16 @@ MapWrapper.prototype = {
       var infoWindow = new google.maps.InfoWindow({
         content:  '<div class="info-window"><img class="info-window-image" src="' + festival.image + '"/><p id="info-window-title">' + festival.title + '<br/> ' + festival.country + '</p></div>'
       });
-      infoWindow.open(this.map, marker); 
+      infoWindow.open(this.map, marker);
       setTimeout(function(){ infoWindow.close()}, 3000);
     });
+  },
+
+  clearMarkers: function () {
+    for(var mark of this.listOfMarkers){
+      mark.setMap(null);
+    }
+    this.listOfMarkers = [];
   }
 }
 
