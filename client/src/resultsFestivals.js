@@ -122,6 +122,7 @@ ResultsFestivals.prototype = {
     handleButtonRemoveFromFavourites: function ( event ) {
       var festivalId = event.target.value;
       var request = new XMLHttpRequest();
+
       var apicall = "http://localhost:3000/api/users/festivals/595cdf80ed62292e5e861a0d/";
       apicall += festivalId;
       console.log(apicall);
@@ -130,6 +131,7 @@ ResultsFestivals.prototype = {
 
       request.onreadystatechange = function () {
         this.renderSliderFestivals( "http://localhost:3000/api/users/festivals/595cdf80ed62292e5e861a0d");
+
         //something to do when the information has saved
       }.bind( this )
       request.send();
