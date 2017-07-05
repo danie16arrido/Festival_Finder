@@ -10,10 +10,12 @@
 
 .modal-content {
     background-color: #fefefe;
+    opacity: 0.8;
+    filter: alpha(opacity=50);
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 20%;
+    width: 13%;
 }
 
 .close {
