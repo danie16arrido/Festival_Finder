@@ -28,15 +28,9 @@ UserQuery.prototype = {
         var collection = db.collection( this.collection );
         collection.findOne({ "_id": ObjectId( userIDtoFind )}, function( err, docs) {
           if ( docs ) {
-            // var storage = [];
-            console.log("arr", docs.myFestivals);
-
             var ids = docs.myFestivals.map(function(festival){
               return ObjectId(festival.id)
             })
-
-            console.log("ids", ids);
-            //got ids
             queryFestivals.findManyById(ids, onQueryFinished)
           }
         })
@@ -62,7 +56,7 @@ UserQuery.prototype = {
     MongoClient.connect( this.url, function ( err, db ) {
       if( db ){
         var collection = db.collection( this.collection );
-        collection.update( {"_id": ObjectId(userId) }, {$pull: { myFestivals: { id: parseInt(festivalToDelete) } } } );
+        collection.update( {"_id": ObjectId(userId) }, {$pull: { myFestivals: { id: festivalToDelete } } } );
         collection.find( {"_id": ObjectId( userId ) }).toArray(function( err,docs ) {
           if ( docs ) {
             onQueryFinished( docs );
@@ -71,7 +65,6 @@ UserQuery.prototype = {
       }
     }.bind( this ))
   }
-
 }
 
 module.exports = UserQuery;

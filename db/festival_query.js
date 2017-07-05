@@ -57,26 +57,15 @@ FestivalQuery.prototype = {
             onQueryFinished(docs)
           }
         })
-
-        // var festivals = this.collection.find(
-        //   {
-        //     _id: {$in: ids}
-        //   }
-        // )
-
       }
     }.bind( this ))
   },
-
-    // db.festivals.find( { "_id": { $in: [ObjectId("595bb6d08d674fbaeb556a21"), ObjectId("595bb6d08d674fbaeb556a23")] } } );
-
 
   findByCountry: function(festivalCountryToFind, onQueryFinished) {
     MongoClient.connect(this.url, function(err, db) {
       if (db) {
         var collection = db.collection(this.collection);
         collection.find({ country: festivalCountryToFind } ).toArray(function( err,docs ) {
-        // collection.findOne({"country": festivalCountryToFind}, function(err,docs) {
           if (docs) {
             onQueryFinished(docs);
           }
