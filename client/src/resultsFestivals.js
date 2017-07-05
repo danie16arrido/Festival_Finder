@@ -122,9 +122,8 @@ ResultsFestivals.prototype = {
     handleButtonRemoveFromFavourites: function ( event ) {
       var festivalId = event.target.value;
       var request = new XMLHttpRequest();
-      var apicall = "http://localhost:3000/api/users/festivals/595d0657d5aeb7c5bd65ecbb";
+      var apicall = "http://localhost:3000/api/users/festivals/595d0657d5aeb7c5bd65ecbb/";
       apicall += festivalId;
-      console.log(apicall);
       request.open('DELETE', apicall);
       request.setRequestHeader("Content-Type", "application/json");
 
