@@ -14,6 +14,7 @@ img.festival-image {
   width: 300px;
   height: 150px;
   border-radius: 4%;
+  border: 15px solid white;
 }
 
 div.festival {
