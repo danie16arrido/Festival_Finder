@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 //hand routing to controllers
-app.use(require("./client/controllers/index"));
+app.use(require("./controllers/index"));
 
 //setup static files
 app.use(express.static("client/build"));

@@ -1,11 +1,11 @@
 var express = require("express");
 var festivalsRouter = express.Router();
 
-var FestivalsQuery = require('../../db/festival_query.js');
+var FestivalsQuery = require('../db/festival_query.js');
 var query = new FestivalsQuery();
 
 //constructor
-var Festival = require('../src/models/festival.js')
+var Festival = require('./src/models/festival.js')
 
 //festival INDEX
 festivalsRouter.get('/', function( req, res ) {
