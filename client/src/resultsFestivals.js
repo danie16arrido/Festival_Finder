@@ -66,21 +66,23 @@ ResultsFestivals.prototype = {
             dateOverlay.classList.add('overlay-date');
             dateOverlay.innerText = ele.start + "/" + ele.end;
 
-            favButton.classList.add('fav-button');
-            favButton.innerText = "Add to favourites";
-            favButton.value = ele._id;
-            favButton.addEventListener( 'click', this.handleButtonAddToFavourites );
-
-
-
+            if( this.isFav ){
+              favButton.classList.add('fav-button');
+              favButton.innerText = "Delete";
+              favButton.value = ele._id;
+              favButton.addEventListener( 'click', this.handleButtonRemoveFromFavourites.bind( this ) );
+            } else {
+              favButton.classList.add('fav-button');
+              favButton.innerText = "Add to favourites";
+              favButton.value = ele._id;
+              favButton.addEventListener( 'click', this.handleButtonAddToFavourites );
+            }
 
             overlayBody.appendChild(favButton);
             overlayBody.appendChild(titleOverlay);
             overlayBody.appendChild(description);
             overlayBody.appendChild(countryOverlay);
             overlayBody.appendChild(dateOverlay);
-
-
 
             festival.classList.add('festival');
 
@@ -108,9 +110,24 @@ ResultsFestivals.prototype = {
         //something to do when the information has saved
       }.bind( this )
       request.send(JSON.stringify( { "id": event.target.value }));
+    },
+
+    handleButtonRemoveFromFavourites: function ( event ) {
+      var festivalId = event.target.value;
+      var request = new XMLHttpRequest();
+      var apicall = "http://localhost:3000/api/users/festivals/595bb6d08d674fbaeb556a42/";
+      apicall += festivalId;
+      console.log(apicall);
+      request.open('DELETE', apicall);
+      request.setRequestHeader("Content-Type", "application/json");
+
+      request.onreadystatechange = function () {
+        this.renderSliderFestivals( "http://localhost:3000/api/users/festivals/595bb6d08d674fbaeb556a42");
+        //something to do when the information has saved
+      }.bind( this )
+      request.send();
     }
 
 }
-
 
 module.exports = ResultsFestivals;
