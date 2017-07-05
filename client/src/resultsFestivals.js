@@ -1,10 +1,10 @@
 var ResultsFestivals = require('./resultsFestivals.js');
-var myKey = "595bb6d08d674fbaeb556a42";
+var FestivalsList = require("./festivalsList");
+var user = require('./userId.js');
 
 var ResultsFestivals = function( fav ) {
-  this.userPath = "http://localhost:3000/api/users/festivals/" + myKey + "/";
+  this.userPath = "http://localhost:3000/api/users/festivals/" + user.id + "/";
   this.defaultSliderUrl = "http://localhost:3000/api/festivals/ratings/6";
-  var FestivalsList = require("./festivalsList");
   this.list = new FestivalsList( null );
   this.isFav =  fav || false;
 }
@@ -50,12 +50,8 @@ ResultsFestivals.prototype = {
             date.classList.add('festival-date');
             date.innerText = ele.start;
 
-
-
             overlay.classList.add('overlay');
             overlayBody.classList.add('overlay-body');
-
-
 
             titleOverlay.classList.add('overlay-title');
             titleOverlay.innerText = ele.title;
@@ -95,7 +91,6 @@ ResultsFestivals.prototype = {
             festival.appendChild(date);
 
             overlay.appendChild(overlayBody);
-
 
             festivalList.appendChild(festival);
             festival.appendChild(overlay);

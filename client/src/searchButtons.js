@@ -1,8 +1,8 @@
 var ResultsFestivals = require('./resultsFestivals.js');
-var mykey = "595bb6d08d674fbaeb556a42";
+var user = require('./userId.js');
 
 var SearchButton = function(map){
-  this.currentUserId = "http://localhost:3000/api/users/festivals/" + mykey;
+  this.currentUserId = "http://localhost:3000/api/users/festivals/" + user.id;
   this.types = ["Film", "Music", "Carnival", "Religious Traditional", "New Year", "Food and Drink", "Scenic Arts"];
   this.favourites = "Favourites";
   this.map = map;
