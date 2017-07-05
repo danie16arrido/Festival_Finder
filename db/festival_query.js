@@ -47,9 +47,23 @@ FestivalQuery.prototype = {
   },
 
   findManyById: function ( arrayOfIds, onQueryFinished) {
+    console.log('array of ids', arrayOfIds)
     MongoClient.connect( this.url,function( err,db ) {
       if ( db ) {
-    
+        var collection = db.collection( this.collection );
+        collection.find({_id: {$in: arrayOfIds}}).toArray(function( err,docs ) {
+          if ( docs ) {
+            console.log("festivals", docs)
+            onQueryFinished(docs)
+          }
+        })
+
+        // var festivals = this.collection.find(
+        //   {
+        //     _id: {$in: ids}
+        //   }
+        // )
+
       }
     }.bind( this ))
   },

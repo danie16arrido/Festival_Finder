@@ -28,29 +28,16 @@ UserQuery.prototype = {
         var collection = db.collection( this.collection );
         collection.findOne({ "_id": ObjectId( userIDtoFind )}, function( err, docs) {
           if ( docs ) {
-            var storage = [];
-            for( festival of docs.myFestivals){
-              queryFestivals.findByID( festival.id, function( festivalObj ){
-                storage.push( festivalObj );
-                console.log( "festobj",storage)
-              })
-            }
-            onQueryFinished( storage  );
-            // [
-            // 	{
-            // 		"id": "595bb6d08d674fbaeb556a21"
-            // 	},
-            // 	{
-            // 		"id": "595bb6d08d674fbaeb556a23"
-            // 	}
-            // ]
+            // var storage = [];
+            console.log("arr", docs.myFestivals);
 
-            // [
-            // 	"595bb6d08d674fbaeb556a21",
-            // 	"595bb6d08d674fbaeb556a23"
-            // ]
+            var ids = docs.myFestivals.map(function(festival){
+              return ObjectId(festival.id)
+            })
 
-            // db.festivals.find( { "_id": { $all: [ ObjectId("595bb6d08d674fbaeb556a21") ] } } )
+            console.log("ids", ids);
+            //got ids
+            queryFestivals.findManyById(ids, onQueryFinished)
           }
         })
       }
