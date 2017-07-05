@@ -37,7 +37,7 @@ SearchButton.prototype = {
   },
 
   handleButtonFavouritesClick: function( event ) {
-    var results = new ResultsFestivals();
+    var results = new ResultsFestivals( true );
     results.renderSliderFestivals( event.target.value );
   },
 
@@ -49,7 +49,7 @@ SearchButton.prototype = {
     return apiCall;
   },
 
-  renderFavButton: function(fav) {
+  renderFavButton: function( fav ) {
     var appendDiv = document.createElement('appendDiv');
     appendDiv.classList.add('head-div');
 
