@@ -103,7 +103,7 @@ ResultsFestivals.prototype = {
     handleButtonAddToFavourites: function ( event ) {
       console.log( event.target.value);
       var request = new XMLHttpRequest();
-      request.open('POST', "http://localhost:3000/api/users/festivals/595bb6d08d674fbaeb556a42");
+      request.open('POST', "http://localhost:3000/api/users/festivals/595d0657d5aeb7c5bd65ecbb");
       request.setRequestHeader("Content-Type", "application/json");
 
       var modal = document.getElementById('myModal');
@@ -122,14 +122,14 @@ ResultsFestivals.prototype = {
     handleButtonRemoveFromFavourites: function ( event ) {
       var festivalId = event.target.value;
       var request = new XMLHttpRequest();
-      var apicall = "http://localhost:3000/api/users/festivals/595cfc57589bcfea21f69b81";
+      var apicall = "http://localhost:3000/api/users/festivals/595d0657d5aeb7c5bd65ecbb";
       apicall += festivalId;
       console.log(apicall);
       request.open('DELETE', apicall);
       request.setRequestHeader("Content-Type", "application/json");
 
       request.onreadystatechange = function () {
-        this.renderSliderFestivals( "http://localhost:3000/api/users/festivals/595cfc57589bcfea21f69b81");
+        this.renderSliderFestivals( "http://localhost:3000/api/users/festivals/595d0657d5aeb7c5bd65ecbb");
         //something to do when the information has saved
       }.bind( this )
       request.send();
