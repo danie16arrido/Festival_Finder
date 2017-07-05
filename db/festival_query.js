@@ -134,7 +134,6 @@ FestivalQuery.prototype = {
      MongoClient.connect( this.url, function ( err, db ) {
        if( db ){
          var collection = db.collection( this.collection );
-
          collection.deleteOne( { "_id": ObjectId( festivalID )}, function( err, docs ) {
            if( docs ){
              onQueryFinished( docs );

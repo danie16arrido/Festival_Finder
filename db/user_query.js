@@ -4,7 +4,6 @@ var ObjectId = require('mongodb').ObjectID;
 var FestivalsQuery = require('./festival_query.js');
 var queryFestivals = new FestivalsQuery();
 
-
 var UserQuery = function() {
   this.url = "mongodb://localhost:27017/festival_finder";
   this.collection = "users";
