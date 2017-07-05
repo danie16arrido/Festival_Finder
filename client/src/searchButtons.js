@@ -1,6 +1,7 @@
 var SearchButton = function(typesFromApp, fav){
   this.types = typesFromApp;
   this.favourites = fav;
+  this.currentUserId = "http://localhost:3000/api/users/festivals/595bb6d08d674fbaeb556a42";
 }
 
 SearchButton.prototype = {
@@ -38,6 +39,7 @@ SearchButton.prototype = {
   handleButtonFavouritesClick: function( event ) {
     var ResultsFestivals = require('./resultsFestivals.js');
     var results = new ResultsFestivals();
+    results.renderSliderFestivals( event.target.value );
 
 
 
@@ -57,7 +59,7 @@ SearchButton.prototype = {
 
     var button = document.createElement('button');
     button.innerText = " Favourites";
-    button.value = "http://localhost:3000/api/users/festivals/595ba18a4b9c1c193f6789ff";
+    button.value = this.currentUserId;
 
     button.addEventListener('click', this.handleButtonFavouritesClick);
 
