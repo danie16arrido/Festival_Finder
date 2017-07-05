@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
 body {
   margin: 0px 0px 0px 0px;
+  font-family: "Playfair Display";
+  background-color: #FAF1FC;
 }
 
 #container {
@@ -17,13 +21,13 @@ body {
   width: 100%;
   padding-bottom: 0px;
   padding-bottom: 0px;
-  border: 1px dashed black;
 }
 
 #main-map {
   order: 2;
   width: 100%;
   height: 300px;
+  border: 2px solid #AAA4AB;
 }
 
 #search-bar {
@@ -56,8 +60,6 @@ body {
   flex-wrap:wrap;
   width: 100%;
   height: 450px;
-  padding-top: 30px;
-
 }
 
 #festival-div {
@@ -75,21 +77,21 @@ div.festival:hover .overlay {
 img.festival-image {
   width: 300px;
   height: 150px;
+  border-radius: 4%;
 }
 
 div.festival {
-  color: #444444;
+  color: white;
   flex-flow: column;
-  border: 1px solid grey;
-  background: #d3d3d3;
+  background-color: #C0ACC2;
   display: block;
   position: relative;
   text-align: center;
-  border: 5px solid white;
   border-radius: 5%;
   padding: 15px 10px 0px 10px;
+  margin: 10px;
+  box-shadow: 6px 6px 5px #888888;
 }
-
 
 div.overlay {
   position: absolute;
@@ -101,12 +103,13 @@ div.overlay {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #46bcec;
-  border-radius: 5%;
+  background-color: #FFF9DE;
+  border-radius: 3%;
   overflow-y: scroll;
 }
 
 div.overlay-body {
+  color: #192231;
   width: 90%;
   font-size: 15px;
   text-align: left;
@@ -115,14 +118,15 @@ div.overlay-body {
 }
 
 button {
-  padding: 10px 15px;
+  font-size: 13px;
+  padding: 20px 25px;
   margin: 20px auto;
-  color: #FFFDFD;
-  background-color: #555;
+  color: white;
+  background-color: #ADB4C4;
   border: 0 none;
   border-radius: 3px;
   cursor: pointer;
-  background: linear-gradient(#888, #555);
+  box-shadow: 3px 3px 2px #888888;
 }
 
 .info-window-image {
@@ -131,3 +135,16 @@ button {
   height: 100px;
 }
 
+button.fav-button {
+  background-color: #AEA7BF;
+  padding: 10px 15px;
+  float: right;
+  margin-left: 10px;
+}
+
+button.header-fav-button {
+  background-color: #BD77AE;
+  padding: 15px 20px;
+  float: right;
+  margin-right: 20px;
+}

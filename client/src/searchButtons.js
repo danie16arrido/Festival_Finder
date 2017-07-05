@@ -41,8 +41,6 @@ SearchButton.prototype = {
     var results = new ResultsFestivals();
     results.renderSliderFestivals( event.target.value );
 
-
-
   },
 
   createUrl: function ( buttonValue ) {
@@ -60,6 +58,11 @@ SearchButton.prototype = {
     var button = document.createElement('button');
     button.innerText = " Favourites";
     button.value = this.currentUserId;
+
+
+    button.classList.add('header-fav-button');
+
+    button.addEventListener('click', this.handleButtonClick);
 
     button.addEventListener('click', this.handleButtonFavouritesClick);
 
