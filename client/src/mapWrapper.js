@@ -26,7 +26,7 @@ var MapWrapper = function(container, coords, zoom){
       'styled_map']
     }
   });
-  //below option needed for colouring maps
+  //below options needed for colouring maps
   this.googleMap.mapTypes.set('styled_map', styledMapType);
   this.googleMap.setMapTypeId('styled_map');
 }

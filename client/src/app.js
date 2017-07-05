@@ -12,8 +12,6 @@ var initialize = function(){
 
   results.renderSliderFestivals();
 
-
-
   var SearchButton = require('./searchButtons.js')
   var buttons = new SearchButton(mainMap);
 
