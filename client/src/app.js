@@ -1,6 +1,6 @@
 var initialize = function(){
   var mapDiv = document.getElementById('main-map');
-  var center = { lat: 0, lng: 0 };
+  var center = { lat: 48.57479, lng: 14.941906 };
 
   var MapWrapper = require('./mapWrapper');
   var mainMap = new MapWrapper(mapDiv, center, 2);
