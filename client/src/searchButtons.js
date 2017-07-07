@@ -35,7 +35,7 @@ SearchButton.prototype = {
   },
 
   handleButtonClick: function( event ) {
-    var results = new ResultsFestivals();
+    var results = new ResultsFestivals()
     var apiCall = this.createUrl( event.target.value );
     //WE WANT TO RENDER MAP MARKERS
     this.map.clearMarkers();
